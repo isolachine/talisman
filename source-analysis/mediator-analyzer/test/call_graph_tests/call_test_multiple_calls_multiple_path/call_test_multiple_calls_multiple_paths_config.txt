@@ -1,0 +1,4 @@
+source_function=main
+sink_function=func_C
+generate_call_strings=true
+output_call_string_dot=true

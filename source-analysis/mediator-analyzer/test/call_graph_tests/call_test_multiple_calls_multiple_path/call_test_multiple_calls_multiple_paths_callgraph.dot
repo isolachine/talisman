@@ -1,0 +1,28 @@
+digraph "Call Graph for 'call_test_multiple_calls_multiple_paths.bc'  "{
+label="Call Graph for 'call_test_multiple_calls_multiple_paths.bc' ";
+Node_4[shape=box,style=solid,label="main"]
+"Node_4"->"Node_2"
+"Node_4"->"Node_3"
+Node_2[shape=box,style=solid,label="func_A"]
+"Node_2"->"Node_1"
+Node_3[shape=box,style=solid,label="func_D"]
+"Node_3"->"Node_0"
+Node_1[shape=box,style=solid,label="func_B"]
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="func_C"]
+}
+
+digraph "Call Graph for 'call_test_multiple_calls_multiple_paths.bc'  "{
+label="Call Graph for 'call_test_multiple_calls_multiple_paths.bc' ";
+Node_4[shape=box,style=solid,label="main"]
+"Node_4"->"Node_2"
+"Node_4"->"Node_3"
+Node_2[shape=box,style=solid,label="func_A"]
+"Node_2"->"Node_1"
+Node_3[shape=box,style=solid,label="func_D"]
+"Node_3"->"Node_0"
+Node_1[shape=box,style=solid,label="func_B"]
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="func_C"]
+}
+

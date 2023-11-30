@@ -1,0 +1,35 @@
+digraph "Call Graph for 'call_strings'  "{
+label="Call Graph for 'call_strings' ";
+Node_7[shape=box,style=solid,label="Root"]
+Node_8[shape=box,style=solid,label="main"]
+"Node_7"->"Node_8"
+Node_9[shape=box,style=solid,label="  %call = call i32 @func_A(i32 %0), !dbg !16
+call_test_multiple_calls_multiple_paths.c:4"]
+Node_10[shape=box,style=solid,label="func_A"]
+"Node_9"->"Node_10"
+Node_11[shape=box,style=solid,label="  %call = call i32 @func_B(i32 %0), !dbg !14
+call_test_multiple_calls_multiple_paths.c:12"]
+Node_12[shape=box,style=solid,label="func_B"]
+"Node_11"->"Node_12"
+Node_13[shape=box,style=solid,label="  %call = call i32 @func_C(i32 %0), !dbg !14
+call_test_multiple_calls_multiple_paths.c:16"]
+Node_14[shape=box,style=solid,label="func_C"]
+"Node_13"->"Node_14"
+"Node_8"->"Node_9"
+"Node_10"->"Node_11"
+"Node_12"->"Node_13"
+Node_15[shape=box,style=solid,label="Root"]
+Node_16[shape=box,style=solid,label="main"]
+"Node_15"->"Node_16"
+Node_17[shape=box,style=solid,label="  %call1 = call i32 @func_D(i32 %1), !dbg !20
+call_test_multiple_calls_multiple_paths.c:5"]
+Node_18[shape=box,style=solid,label="func_D"]
+"Node_17"->"Node_18"
+Node_19[shape=box,style=solid,label="  %call = call i32 @func_C(i32 %0), !dbg !14
+call_test_multiple_calls_multiple_paths.c:24"]
+Node_20[shape=box,style=solid,label="func_C"]
+"Node_19"->"Node_20"
+"Node_16"->"Node_17"
+"Node_18"->"Node_19"
+}
+

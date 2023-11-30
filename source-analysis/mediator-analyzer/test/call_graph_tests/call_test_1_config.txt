@@ -1,0 +1,3 @@
+source_function=main
+sink_function=test_function
+generate_call_strings=true

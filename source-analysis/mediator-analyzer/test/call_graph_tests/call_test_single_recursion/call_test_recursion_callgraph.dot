@@ -1,0 +1,44 @@
+digraph "Call Graph for 'call_test_recursion.bc'  "{
+label="Call Graph for 'call_test_recursion.bc' ";
+Node_3[shape=box,style=solid,label="main"]
+"Node_3"->"Node_2"
+Node_2[shape=box,style=solid,label="func_A"]
+"Node_2"->"Node_1"
+Node_1[shape=box,style=solid,label="func_R"]
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="func_Z"]
+}
+
+digraph "Call Graph for 'call_test_recursion.bc'  "{
+label="Call Graph for 'call_test_recursion.bc' ";
+Node_3[shape=box,style=solid,label="main"]
+"Node_3"->"Node_2"
+Node_2[shape=box,style=solid,label="func_A"]
+"Node_2"->"Node_1"
+Node_1[shape=box,style=solid,label="func_R"]
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="func_Z"]
+}
+
+digraph "Call Graph for 'call_test_recursion.bc'  "{
+label="Call Graph for 'call_test_recursion.bc' ";
+Node_3[shape=box,style=solid,label="main"]
+"Node_3"->"Node_2"
+Node_2[shape=box,style=solid,label="func_A"]
+"Node_2"->"Node_1"
+Node_1[shape=box,style=solid,label="func_R"]
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="func_Z"]
+}
+
+digraph "Call Graph for 'call_test_recursion.bc'  "{
+label="Call Graph for 'call_test_recursion.bc' ";
+Node_3[shape=box,style=solid,label="main"]
+"Node_3"->"Node_2"
+Node_2[shape=box,style=solid,label="func_A"]
+"Node_2"->"Node_1"
+Node_1[shape=box,style=solid,label="func_R"]
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="func_Z"]
+}
+

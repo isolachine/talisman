@@ -1,0 +1,93 @@
+======================================================================================================
+Preamble
+======================================================================================================
+
+Instructions for generating a command to run PP-Trace or Clang AST analysis 
+(These assume you have built linux)
+
+
+Running any of the clang-tools is akin to invoking a compiler. 
+This means that all headers and includes must be specified.
+
+The method I went with was to fetch the gcc compilation command by building linux normally, then modifying the compilation command to instead execute the constant-analyzer or pp-trace with the respective arguments.
+
+Note you will need to perform this seperately for each LSM module that you plan on investigating.
+
+Note that python is not needed to run the constant analysis or pptrace, but is required to run the python scripts to clean up
+the output of pp-trace and coalesce the data.
+
+
+======================================================================================================
+Instructions
+======================================================================================================
+
+1. Install necessary python packages
+
+	-sudo apt-get install python-all python3
+	-sudo ln -s /usr/bin/python2.7 /usr/bin/python
+
+2. Craft a command to invoke the the constant-analysis or pp-trace following the guide below
+3. Run the constant-analyzer on a given target and save the output to a file
+	- Using the command you crafted by following the guide
+4. Run pp-trace on a given target and save the output to a file
+	- Using the command you crafted by following the guide
+5. Pass the output of pp-trace and a path to the targets source tree to clean up the pp-trace output
+	- Follow the pp-trace cleanup section
+6. The result will be (1) output file from the constant analysis, and (2) a cleaned up pp-trace output
+
+======================================================================================================
+Craft a command to invoke the constant-analyzer Clang tool.
+======================================================================================================
+
+3. Use the following command to output the gcc arguments used to compile each file.
+
+   make V=1 M=security/tomoyo 
+
+   Look for tomoyo.c, lsm.c, and hooks.c for Tomoyo, AppArmor, and SELinux respectively for the correct "main" file.
+   
+
+   Raw gcc command used to compile hooks.c from SELinux:
+   
+   gcc -Wp,-MD,security/selinux/.hooks.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/9/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -fno-pie -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -fno-pie -no-pie -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -fno-reorder-blocks -fno-ipa-cp-clone -fno-partial-inlining -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -I./security/selinux -I./security/selinux/include    -fsanitize=kernel-address -fasan-shadow-offset=0xdff8000000000000 --param asan-stack=1 --param asan-globals=1 --param asan-instrumentation-with-call-threshold=0  -fsanitize-address-use-after-scope   -fsanitize-coverage=trace-pc    -DKBUILD_BASENAME='"hooks"'  -DKBUILD_MODNAME='"selinux"' -c -o security/selinux/.tmp_hooks.o security/selinux/hooks.c
+   
+   1. Trim the end of the command to remove the output file argument and input
+   	-  "-o security/selinux/.tmp_hooks.o security/selinux/hooks.c"
+   2. Replace gcc with:
+	"/path/to/llvm-project/build/bin/constant-analyzer /path/to/linux-4.14.1/security/selinux/hooks.c --"
+
+The command should look like the following:
+
+/path/to/llvm-project/build/bin/constant-analyzer /path/to/linux-4.14.1/security/selinux/hooks.c -- -Wp,-MD,security/selinux/.hooks.o.d  -nostdinc -isystem /usr/lib/gcc/x86_64-linux-gnu/9/include -I./arch/x86/include -I./arch/x86/include/generated  -I./include -I./arch/x86/include/uapi -I./arch/x86/include/generated/uapi -I./include/uapi -I./include/generated/uapi -include ./include/linux/kconfig.h -D__KERNEL__ -fno-pie -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing -fno-common -fshort-wchar -Werror-implicit-function-declaration -Wno-format-security -std=gnu89 -fno-PIE -mno-sse -mno-mmx -mno-sse2 -mno-3dnow -mno-avx -m64 -falign-jumps=1 -falign-loops=1 -mno-80387 -mno-fp-ret-in-387 -mpreferred-stack-boundary=3 -mskip-rax-setup -mtune=generic -mno-red-zone -mcmodel=kernel -funit-at-a-time -DCONFIG_X86_X32_ABI -DCONFIG_AS_CFI=1 -DCONFIG_AS_CFI_SIGNAL_FRAME=1 -DCONFIG_AS_CFI_SECTIONS=1 -DCONFIG_AS_FXSAVEQ=1 -DCONFIG_AS_SSSE3=1 -DCONFIG_AS_CRC32=1 -DCONFIG_AS_AVX=1 -DCONFIG_AS_AVX2=1 -DCONFIG_AS_AVX512=1 -DCONFIG_AS_SHA1_NI=1 -DCONFIG_AS_SHA256_NI=1 -pipe -Wno-sign-compare -fno-asynchronous-unwind-tables -fno-delete-null-pointer-checks -Wno-frame-address -Wno-format-truncation -Wno-format-overflow -Wno-int-in-bool-context -fno-pie -no-pie -O2 --param=allow-store-data-races=0 -DCC_HAVE_ASM_GOTO -fno-reorder-blocks -fno-ipa-cp-clone -fno-partial-inlining -fno-stack-protector -Wno-unused-but-set-variable -Wno-unused-const-variable -fno-omit-frame-pointer -fno-optimize-sibling-calls -fno-var-tracking-assignments -pg -mfentry -DCC_USING_FENTRY -fno-inline-functions-called-once -Wdeclaration-after-statement -Wno-pointer-sign -fno-strict-overflow -fconserve-stack -Werror=implicit-int -Werror=strict-prototypes -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -I./security/selinux -I./security/selinux/include    -fsanitize=kernel-address -fasan-shadow-offset=0xdff8000000000000 --param asan-stack=1 --param asan-globals=1 --param asan-instrumentation-with-call-threshold=0  -fsanitize-address-use-after-scope   -fsanitize-coverage=trace-pc    -DKBUILD_BASENAME='"hooks"'  -DKBUILD_MODNAME='"selinux"' -c
+
+*Note*: Be mindful of paths in the gcc command. If you generate the gcc command on a different machine than the one running the analysis, paths may vary.
+
+
+4. The resultant transformed command can be used to execute the constant analysis. If you would like to execute pp-trace, simply replace the tool name at the beginning of the command to pp-trace:
+	-	/path/to/llvm-project/build/bin/constant-analyzer
+	+	/path/to/llvm-project/build/bin/pp-trace (If you performed a build --install with LLVM pp-trace should be on path)
+	
+	
+	
+======================================================================================================
+pp-trace Cleanup
+======================================================================================================
+pp-trace output is quite verbose, but also gathers information on all macros, including local macros.
+Considering local macros are considered okay for the purposes of data integrity for the model at the time of writing,
+we pass a list of local macros gathered using "grep" and the pptrace output to a python script to organize and filter out
+local macros. Pass the output of pp-trace to a the python script `organize-pp-trace.py` clean it up.
+
+# Grep for the defines in the target source directory to identify the local defines
+grep -R "#define" /path/to/target &> target.defines
+
+# Assuming you have 2 files (pptrace output in target.pptrace and grep output in target.defines)
+# Run the python script with the local defines output and the pp-trace output to filter and organize the data that is passed to the taint analysis.
+
+python organize-pp-trace.py target.defines target.pptrace 
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+digraph "Call Graph for 'call_test_1.bc'  "{
+label="Call Graph for 'call_test_1.bc' ";
+Node_1[shape=box,style=solid,label="main"]
+"Node_1"->"Node_0"
+"Node_1"->"Node_0"
+Node_0[shape=box,style=solid,label="test_function"]
+}
+

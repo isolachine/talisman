@@ -1,0 +1,12 @@
+/opt/clion-2023.1/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/opt/clion-2023.1/bin/ninja/linux/x64/ninja -G Ninja -S /home/user/LLVM/Mediator-Analaysis-Project -B /home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug
+-- Searching CMAKE Path in /home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug/CMakeFiles/pkgRedirects
+-- Found LLVM 10.0.1
+-- Using LLVMConfig.cmake in: /usr/local/lib/cmake/llvm
+LLVM STATUS:
+  Definitions -D_GNU_SOURCE -D_DEBUG -D__STDC_CONSTANT_MACROS -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS
+  Includes    /usr/local/include
+  Libraries   /usr/local/lib
+  Targets     X86
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug

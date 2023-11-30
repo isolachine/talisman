@@ -1,0 +1,22 @@
+digraph "Call Graph for 'call_strings'  "{
+label="Call Graph for 'call_strings' ";
+Node_6[shape=box,style=solid,label="Root"]
+Node_7[shape=box,style=solid,label="main"]
+"Node_6"->"Node_7"
+Node_8[shape=box,style=solid,label="  %call = call i32 @func_A(i32 %0), !dbg !14
+call_test_recusion.c:4"]
+Node_9[shape=box,style=solid,label="func_A"]
+"Node_8"->"Node_9"
+Node_10[shape=box,style=solid,label="  %call = call i32 @func_R(i32 %0), !dbg !14
+call_test_recusion.c:8"]
+Node_11[shape=box,style=solid,label="func_R"]
+"Node_10"->"Node_11"
+Node_12[shape=box,style=solid,label="  %call = call i32 @func_Z(i32 %1), !dbg !19
+call_test_recusion.c:14"]
+Node_13[shape=box,style=solid,label="func_Z"]
+"Node_12"->"Node_13"
+"Node_7"->"Node_8"
+"Node_9"->"Node_10"
+"Node_11"->"Node_12"
+}
+

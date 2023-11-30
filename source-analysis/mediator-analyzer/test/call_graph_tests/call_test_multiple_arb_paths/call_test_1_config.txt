@@ -1,0 +1,5 @@
+source_function=main
+sink_function=func_Z
+generate_call_strings=true
+output_call_string=dot
+output_call_string=stdin

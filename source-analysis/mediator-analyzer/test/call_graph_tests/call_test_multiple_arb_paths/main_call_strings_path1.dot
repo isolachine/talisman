@@ -1,0 +1,42 @@
+digraph "Call Graph for 'call_strings'  "{
+label="Call Graph for 'call_strings' ";
+Node_6[shape=box,style=solid,label="func_X"]
+Node_5[shape=box,style=solid,label="func_Z"]
+Node_8[shape=box,style=solid,label="main"]
+Node_0[shape=box,style=solid,label="rand_A"]
+Node_1[shape=box,style=solid,label="rand_B"]
+Node_7[shape=box,style=solid,label="rand_C"]
+Node_3[shape=box,style=solid,label="rand_K"]
+Node_2[shape=box,style=solid,label="rand_L"]
+Node_90000[shape=box,style=solid,label="Root"]
+"Node_90000"->"Node_8"
+Node_19[shape=box,style=solid,label="  %call = call i32 @func_X(i32 %mul), !dbg !20
+call_test_m_a.c:35"]
+"Node_19"->"Node_6"
+Node_11[shape=box,style=solid,label="  %call = call i32 @func_Z(i32 %0), !dbg !16
+call_test_m_a.c:41"]
+"Node_11"->"Node_5"
+Node_13[shape=box,style=solid,label="  %call = call i32 @rand_A(i32 5), !dbg !13
+call_test_m_a.c:3"]
+"Node_13"->"Node_0"
+Node_20[shape=box,style=solid,label="  %call = call i32 @rand_L(i32 %0), !dbg !14
+call_test_m_a.c:15"]
+"Node_20"->"Node_2"
+Node_14[shape=box,style=solid,label="  %call1 = call i32 @rand_B(i32 10), !dbg !16
+call_test_m_a.c:4"]
+"Node_14"->"Node_1"
+Node_15[shape=box,style=solid,label="  %call2 = call i32 @rand_K(i32 %0), !dbg !18
+call_test_m_a.c:5"]
+"Node_15"->"Node_3"
+Node_16[shape=box,style=solid,label="  %call3 = call i32 @rand_C(i32 %1, i32 %2), !dbg !21
+call_test_m_a.c:7"]
+"Node_16"->"Node_7"
+"Node_6"->"Node_11"
+"Node_8"->"Node_13"
+"Node_8"->"Node_14"
+"Node_8"->"Node_15"
+"Node_8"->"Node_16"
+"Node_7"->"Node_19"
+"Node_3"->"Node_20"
+}
+

@@ -1,0 +1,76 @@
+======================================================================================================
+Instructions for generating LLVM bitcode files for specific modules
+======================================================================================================
+
+ (Optional): Follow this reference if you are attempting to compile an older version of linux and require an earlier gcc version
+	- Install gcc-5: https://askubuntu.com/questions/1229774/how-to-use-an-older-version-of-gcc
+ (Optional): Patches for kernel 4.14.1 below. These were required for compiling on Ubuntu 20.04 with gcc version 9.4
+ (Required): Install the following libraries: libssl-dev libelf-dev
+	
+1. cd linux-X.X.X
+2. Run 'make allyesconfig'
+3. Edit the Makefile and add the following commands to add additional compiler flags. The location to insert these commands will vary slightly 	 	between linux versions. In linux version 4.14.1 all variables have been created by line 630
+
+	KBUILD_CFLAGS += $(call cc-option, -fno-pie)
+	KBUILD_CFLAGS += $(call cc-option, -no-pie)
+	KBUILD_AFLAGS += $(call cc-option, -fno-pie)
+	KBUILD_CPPFLAGS += $(call cc-option, -fno-pie) 
+	
+	
+4. Run 'make prepare'
+5. Run 'make modules_prepare'
+6. Run 'make modules'  // Needed to generate modules.symvers file
+7. Run the clang compilation command for each LSM module (You may need to adjust the path to clang depending on how you compiled LLVM):
+make V=0 \
+	CLANG_FLAGS="-emit-llvm-bc" \
+	HOSTCC="/usr/local/bin/clang --save-temps=obj -no-integrated-as -g" \
+	CC="/usr/local/bin/clang --save-temps=obj -no-integrated-as -g" \
+	-j8 M=security/tomoyo \
+	2>/dev/null
+	
+8. Link .bc files
+	At this point there should be a .bc file for each .c file in the source tree. We can link .bc files together using the LLVM command llvm-link.
+	
+	llvm-link *.bc -o binary_name.bc // Will link all .bc files in current directory and output to binary_name.bc. Be mindful if source tree as subdirectories, depending on what you are compiling you may need to recursively find all .bc files. 
+	
+	
+
+======================================================================================================
+Patches for compilation of Linux 4.14.1 on Ubuntu 20.04, with gcc 9.4
+======================================================================================================
+
+
+tools/lib/str_error_r.c in function: str_error_r()
+
+	-	snprintf(buf, buflen, "INTERNAL ERROR: strerror_r(%d, %p, %zd)=%d", errnum, buf, buflen, err);
+	+	snprintf(buf, buflen, "INTERNAL ERROR: strerror_r(%d, [buf], %zd)=%d", errnum, buflen, err);
+	
+	
+tools/lib/subcmd/pager.c in function: pager_preexec()
+
+	 	fd_set in;
+	+	fd_set exception;
+	 
+	 	FD_ZERO(&in);
+	+	FD_ZERO(&exception);
+	 	FD_SET(0, &in);
+	-	select(1, &in, NULL, &in, NULL);
+	+	FD_SET(0, &exception);
+	+	select(1, &in, NULL, &exception, NULL);
+	 
+	 	setenv("LESS", "FRSX", 0);
+	 	
+security/selinux/include/classmap.h
+	+	#include <linux/socket.h>
+	 	
+scripts/selinux/genheaders/genheaders.c
+	- 	#include <sys/socket.h>
+	
+scripts/selinux/mdp/mdp.c
+	- 	#include <sys/socket.h>
+
+======================================================================================================
+Libraries needed
+======================================================================================================
+
+libssl-dev libelf-dev

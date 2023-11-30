@@ -1,0 +1,31 @@
+======================================================================================================
+Directory Contents
+======================================================================================================
+
+Documentation/llvm-setup-instructions       - Instructions for building a LLVM environment to run our analysis' and compile programs with clang
+Documentation/linux-source-setup.txt        - Instructions for building reference linux directory as performed on Ubuntu 20.04.6 with gcc 9.4
+Documentation/running-constant-analysis.txt - Instructions for executing PP-Trace or a Clang AST analysis over a specific LSM Module
+
+constant-analyzer/  - Clang front end analysis
+mediator-analysis/  - Taint analysis for mediator code
+pp-trace-scripts/   - Scripts for cleaning up and filtering pp-trace output
+
+======================================================================================================
+Preferred install order
+======================================================================================================
+
+1. Setup llvm environment (follow llvm-setup-instructions)
+    - Installs the necessary llvm and clang framework necessary for executing both parts of the analysis
+
+2. Install the taint-analysis tool (follow taint-analysis-install)
+    - Installs the pdg generation tool and its dependencies
+    - Installs the taint analysis tool
+
+    If you just want to install the taint analysis tool and re-run tests or prior analysis
+    you can stop here as reference inputs are included in the test/ directory.
+
+    If you want to create a new scenario completely follow the rest of the setup which
+    shows how to run the constant analysis and how it was performed on linux.
+
+3. Build linux bitcode files (follow linux-source-setup.txt)
+4. Run the constant analysis (follow running-constant-analysis.txt)

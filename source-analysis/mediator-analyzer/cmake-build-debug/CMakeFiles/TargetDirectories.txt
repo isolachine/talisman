@@ -1,0 +1,4 @@
+/home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug/CMakeFiles/intrinsics_gen.dir
+/home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug/CMakeFiles/MediatorAnalysis.dir
+/home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/user/LLVM/Mediator-Analaysis-Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

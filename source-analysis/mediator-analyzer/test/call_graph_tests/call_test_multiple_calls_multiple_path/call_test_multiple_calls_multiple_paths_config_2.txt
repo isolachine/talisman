@@ -1,0 +1,3 @@
+source_function=main
+call_depth=2
+generate_call_strings=true
