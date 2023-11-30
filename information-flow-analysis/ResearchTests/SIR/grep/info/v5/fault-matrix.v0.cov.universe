@@ -1,0 +1,798 @@
+	1 listversions
+	199 listtests
+-P [-0 12345 ../inputs/grep1.dat]
+-P [-1 12345 ../inputs/grep1.dat]
+-P [-2 12345 ../inputs/grep1.dat]
+-P [-3 12345 ../inputs/grep1.dat]
+-P [-4 12345 ../inputs/grep1.dat]
+-P [-5 12345 ../inputs/grep1.dat]
+-P [-6 12345 ../inputs/grep1.dat]
+-P [-7 12345 ../inputs/grep1.dat]
+-P [-8 12345 ../inputs/grep1.dat]
+-P [-9 12345 ../inputs/grep1.dat]
+-P [-f 12345 ../inputs/grep1.dat]
+-P [-i 12345 ../inputs/grep1.dat]
+-P [-Y 12345 ../inputs/grep1.dat]
+-P [-A -12345 ../inputs/grep1.dat]
+-P [-B -12345 ../inputs/grep1.dat]
+-P [-F -E 12345 ../inputs/grep1.dat]
+-P [-E -F 12345 ../inputs/grep1.dat]
+-P [-E -G 12345 ../inputs/grep1.dat]
+-P [-G -X 12345 ../inputs/grep1.dat]
+-P [-f nosuchfile ../inputs/grep1.dat]
+-P [-f ../inputs/grep1.dat ../inputs/grep1.dat]
+-P [-c 12345a] -I [grep1.dat]
+-P [12345a] -I [grep1.dat]
+-P [-c include] -I [grep1.dat]
+-P [include] -I [grep1.dat]
+-P [include ../inputs/grep1.dat]
+-P [-l include] -I [../inputs/grep1.dat]
+-P [-L 12345a] -I [../inputs/grep1.dat]
+-P [12345a] -I [../inputs/grep1.dat]
+-P ["--" 12345 ../inputs/grep1.dat]
+-P [- -- 12345 ../inputs/grep1.dat]
+-P ["[z-a\]" ../inputs/grep1.dat]
+-P ["[5-1\]" ../inputs/grep1.dat]
+-P ["[F-A\]" ../inputs/grep1.dat]
+-P [-ff]
+-P [-f]
+-P ['a$a' ../inputs/grep1.dat]
+-P ['if$' ../inputs/grep1.dat]
+-P ['switch$|else' ../inputs/grep1.dat]
+-P ["1\+\+" ../inputs/grep1.dat]
+-P ["1\?\+" ../inputs/grep1.dat]
+-P ["1\+\?" ../inputs/grep1.dat]
+-P ["[" ../inputs/grep1.dat]
+-P ["a[" ../inputs/grep1.dat]
+-P ["a*[" ../inputs/grep1.dat]
+-P ["[a" ../inputs/grep1.dat]
+-P ["[1" ../inputs/grep1.dat]
+-P ["[1-9" ../inputs/grep1.dat]
+-P ["[1-\]" ../inputs/grep1.dat]
+-P ["[a-\]" ../inputs/grep1.dat]
+-P ["[1a-\]" ../inputs/grep1.dat]
+-P ["[[:alpha:\]-5\]" ../inputs/grep1.dat]
+-P ["[z[:digit:\]-f\]" ../inputs/grep1.dat]
+-P ["[[:alnum:\]-9\]" ../inputs/grep1.dat]
+-P ["[1-2-9\]" ../inputs/grep1.dat]
+-P ["[a-c-z\]" ../inputs/grep1.dat]
+-P ["[1A-Z-A\]" ../inputs/grep1.dat]
+-P ["[[:digit:\]-1-9\]" ../inputs/grep1.dat]
+-P ["[[:digit:\]-A-Z\]" ../inputs/grep1.dat]
+-P ["[[:digit:\]-a-z\]" ../inputs/grep1.dat]
+-P ["[1-2-" ../inputs/grep1.dat]
+-P ["[1A-Z-" ../inputs/grep1.dat]
+-P ["[Aa-z-" ../inputs/grep1.dat]
+-P ["[1-" ../inputs/grep1.dat]
+-P ["[1A-" ../inputs/grep1.dat]
+-P ["[Aa-" ../inputs/grep1.dat]
+-P ["[[:" ../inputs/grep1.dat]
+-P ["a[[:" ../inputs/grep1.dat]
+-P ["1-9[[:" ../inputs/grep1.dat]
+-P ["[[:a:\]\]" ../inputs/grep1.dat]
+-P ["[[:1:\]\]" ../inputs/grep1.dat]
+-P ["[[:abcdefg:\]\]" ../inputs/grep1.dat]
+-P ["[[:alpha:\]" ../inputs/grep1.dat]
+-P ["[a[:digit:\]" ../inputs/grep1.dat]
+-P ["[[:alnum:\]" ../inputs/grep1.dat]
+-P ["\" ../inputs/grep1.dat]
+-P ["if\" ../inputs/grep1.dat]
+-P ["else\" ../inputs/grep1.dat]
+-P ['\`' ../inputs/grep1.dat]
+-P ['if\`' ../inputs/grep1.dat]
+-P ['\`else' ../inputs/grep1.dat]
+-P ["\'" ../inputs/grep1.dat]
+-P ["if\'" ../inputs/grep1.dat]
+-P ["\'else" ../inputs/grep1.dat]
+-P ["\1" ../inputs/grep1.dat]
+-P ["\2" ../inputs/grep1.dat]
+-P ["\3" ../inputs/grep1.dat]
+-P ["\4" ../inputs/grep1.dat]
+-P ["\5" ../inputs/grep1.dat]
+-P ["\6" ../inputs/grep1.dat]
+-P ["\7" ../inputs/grep1.dat]
+-P ["\8" ../inputs/grep1.dat]
+-P ["\9" ../inputs/grep1.dat]
+-P ["\)" ../inputs/grep1.dat]
+-P ["if\)" ../inputs/grep1.dat]
+-P ["[a-z\]\)" ../inputs/grep1.dat]
+-P ["\{" ../inputs/grep1.dat]
+-P ["a\{" ../inputs/grep1.dat]
+-P ["[1-9\]\{" ../inputs/grep1.dat]
+-P ["\{2,1}" ../inputs/grep1.dat]
+-P ["a\{2,1}" ../inputs/grep1.dat]
+-P ["\{1" ../inputs/grep1.dat]
+-P ["\{1,2" ../inputs/grep1.dat]
+-P ["a\{1" ../inputs/grep1.dat]
+-P ["\{1\{" ../inputs/grep1.dat]
+-P ["\{1,2\{" ../inputs/grep1.dat]
+-P ["[a-z\]\{1,2\{" ../inputs/grep1.dat]
+-P ["a\{1,2\}" ../inputs/grep1.dat]
+-P ["[1-9\]\{1,2\}" ../inputs/grep1.dat]
+-P ["A\{1,2\}" ../inputs/grep1.dat]
+-P ["A\{0\}" ../inputs/grep1.dat]
+-P ["1\{0\}" ../inputs/grep1.dat]
+-P ["[a-z\]\{0\}" ../inputs/grep1.dat]
+-P ["\(" ../inputs/grep1.dat]
+-P ["a\(" ../inputs/grep1.dat]
+-P ["a\(a" ../inputs/grep1.dat]
+-P ["\|\(a\|b\)1*2\?3\+" ../inputs/grep1.dat]
+-P ["\|\(if\|else\)1*2\?3\+" ../inputs/grep1.dat]
+-P ["\|\(for\|12345\)a*b\?c\+" ../inputs/grep1.dat]
+-P ["a" ../inputs/biginput.dat]
+-P ["[a-z\]" ../inputs/biginput.dat]
+-P ["5\|7" ../inputs/biginput.dat]
+-P [-5 if ../inputs/grep1.dat]
+-P [-7 else ../inputs/grep1.dat]
+-P [-4 12345 ../inputs/grep1.dat]
+-P ["[[:alnum:\]\]" ../inputs/grep1.dat]
+-P ["1[[:alnum:\]\]" ../inputs/grep1.dat]
+-P ["a*[[:alnum:\]\]" ../inputs/grep1.dat]
+-P [-f ../inputs/biginput.dat ../inputs/grep1.dat]
+-P [-f ../inputs/biginput2.dat ../inputs/grep1.dat]
+-P [-f ../inputs/input_enter1 ../inputs/grep1.dat]
+-P [-f ../inputs/input_enter2 ../inputs/grep1.dat]
+-P [-f ../inputs/input_enter3 ../inputs/grep1.dat]
+-P ["\\" ../inputs/grep1.dat]
+-P ["1\\" ../inputs/grep1.dat]
+-P ["a\\" ../inputs/grep1.dat]
+-P ["\^" ../inputs/grep1.dat]
+-P ["1\^" ../inputs/grep1.dat]
+-P ["a\^" ../inputs/grep1.dat]
+-P ["1\|^" ../inputs/grep1.dat]
+-P ["a\|^" ../inputs/grep1.dat]
+-P ["\(1\)^" ../inputs/grep1.dat]
+-P ['\$' ../inputs/grep1.dat]
+-P ['if\$' ../inputs/grep1.dat]
+-P ['main\$' ../inputs/grep1.dat]
+-P ['$' ../inputs/grep1.dat]
+-P ['if$' ../inputs/grep1.dat]
+-P ['main$' ../inputs/grep1.dat]
+-P ['$if' ../inputs/grep1.dat]
+-P ['if$if' ../inputs/grep1.dat]
+-P ['if$else' ../inputs/grep1.dat]
+-P [">" ../inputs/grep1.dat]
+-P ["1>" ../inputs/grep1.dat]
+-P ["1>a" ../inputs/grep1.dat]
+-P ["B" ../inputs/grep1.dat]
+-P ["ABCDE" ../inputs/grep1.dat]
+-P ["[A-B\]" ../inputs/grep1.dat]
+-P ["*" ../inputs/grep1.dat]
+-P ["*a" ../inputs/grep1.dat]
+-P ["*\(abcde\)" ../inputs/grep1.dat]
+-P ["\+" ../inputs/grep1.dat]
+-P ["1\+" ../inputs/grep1.dat]
+-P ["if\+" ../inputs/grep1.dat]
+-P ["+" ../inputs/grep1.dat]
+-P ["+if" ../inputs/grep1.dat]
+-P ["+else" ../inputs/grep1.dat]
+-P ["{" ../inputs/grep1.dat]
+-P ["if{" ../inputs/grep1.dat]
+-P ["else{" ../inputs/grep1.dat]
+-P ["1\{10,11\}2" ../inputs/grep1.dat]
+-P ["a\{10,11\}b" ../inputs/grep1.dat]
+-P ["if\{10,11\}else" ../inputs/grep1.dat]
+-P ["\." ../inputs/grep1.dat]
+-P ["1\.a" ../inputs/grep1.dat]
+-P ["if\.else" ../inputs/grep1.dat]
+-P ["\[" ../inputs/grep1.dat]
+-P ["if\[" ../inputs/grep1.dat]
+-P ["if\[else" ../inputs/grep1.dat]
+-P [-i "[A-z1\]" ../inputs/grep1.dat]
+-P [-i "[C-x2\]" ../inputs/grep1.dat]
+-P [-i "if[Xx5\]" ../inputs/grep1.dat]
+-P [-X grep 12345 ../inputs/grep1.dat]
+-P [-X grep abcde ../inputs/grep1.dat]
+-P [-X grep if ../inputs/grep1.dat]
+-P [-e 1 -e 2 ../inputs/grep1.dat]
+-P [-e a -e b ../inputs/grep1.dat]
+-P [-e if -e else ../inputs/grep1.dat]
+-P [-e 12345 -e abcde -f ../inputs/input_1.dat ../inputs/grep1.dat]
+-P [-e if -e else -f ../inputs/input_1.dat ../inputs/grep1.dat]
+-P [-e 1 -e 2 -e 3 -e 4 -e 5 -e 12345 -f ../inputs/input_1.dat ../inputs/grep1.dat]
+-P [-f ../inputs/input_2.dat ../inputs/grep1.dat]
+-P [-i -f ../inputs/input_2.dat ../inputs/grep1.dat]
+-P [-v -f ../inputs/input_2.dat ../inputs/grep1.dat]
+-P ["\(\b\)*" ../inputs/grep1.dat]
+-P ["if\(\b\)*" ../inputs/grep1.dat]
+-P ["\(\b\)\+" ../inputs/grep1.dat]
+-P ["\(\a|b*\|c\?|d\+\)\{1\}" ../inputs/grep1.dat]
+-P ["\(\if|else*\|for\?|while\+\)\{1\}" ../inputs/grep1.dat]
+-P ["\(\do|12345*\|main\?|A\+\)\{1\}" ../inputs/grep1.dat]
+unitest0:
+v1:
+	0
+unitest1:
+v1:
+	0
+unitest2:
+v1:
+	0
+unitest3:
+v1:
+	0
+unitest4:
+v1:
+	0
+unitest5:
+v1:
+	0
+unitest6:
+v1:
+	0
+unitest7:
+v1:
+	0
+unitest8:
+v1:
+	0
+unitest9:
+v1:
+	0
+unitest10:
+v1:
+	0
+unitest11:
+v1:
+	0
+unitest12:
+v1:
+	0
+unitest13:
+v1:
+	0
+unitest14:
+v1:
+	0
+unitest15:
+v1:
+	0
+unitest16:
+v1:
+	0
+unitest17:
+v1:
+	0
+unitest18:
+v1:
+	0
+unitest19:
+v1:
+	0
+unitest20:
+v1:
+	0
+unitest21:
+v1:
+	0
+unitest22:
+v1:
+	0
+unitest23:
+v1:
+	0
+unitest24:
+v1:
+	0
+unitest25:
+v1:
+	0
+unitest26:
+v1:
+	0
+unitest27:
+v1:
+	0
+unitest28:
+v1:
+	0
+unitest29:
+v1:
+	0
+unitest30:
+v1:
+	0
+unitest31:
+v1:
+	0
+unitest32:
+v1:
+	0
+unitest33:
+v1:
+	0
+unitest34:
+v1:
+	0
+unitest35:
+v1:
+	0
+unitest36:
+v1:
+	0
+unitest37:
+v1:
+	0
+unitest38:
+v1:
+	0
+unitest39:
+v1:
+	0
+unitest40:
+v1:
+	0
+unitest41:
+v1:
+	0
+unitest42:
+v1:
+	0
+unitest43:
+v1:
+	0
+unitest44:
+v1:
+	0
+unitest45:
+v1:
+	0
+unitest46:
+v1:
+	0
+unitest47:
+v1:
+	0
+unitest48:
+v1:
+	0
+unitest49:
+v1:
+	0
+unitest50:
+v1:
+	0
+unitest51:
+v1:
+	0
+unitest52:
+v1:
+	0
+unitest53:
+v1:
+	0
+unitest54:
+v1:
+	0
+unitest55:
+v1:
+	0
+unitest56:
+v1:
+	0
+unitest57:
+v1:
+	0
+unitest58:
+v1:
+	0
+unitest59:
+v1:
+	0
+unitest60:
+v1:
+	0
+unitest61:
+v1:
+	0
+unitest62:
+v1:
+	0
+unitest63:
+v1:
+	0
+unitest64:
+v1:
+	0
+unitest65:
+v1:
+	0
+unitest66:
+v1:
+	0
+unitest67:
+v1:
+	0
+unitest68:
+v1:
+	0
+unitest69:
+v1:
+	0
+unitest70:
+v1:
+	0
+unitest71:
+v1:
+	0
+unitest72:
+v1:
+	0
+unitest73:
+v1:
+	0
+unitest74:
+v1:
+	0
+unitest75:
+v1:
+	0
+unitest76:
+v1:
+	0
+unitest77:
+v1:
+	0
+unitest78:
+v1:
+	0
+unitest79:
+v1:
+	0
+unitest80:
+v1:
+	0
+unitest81:
+v1:
+	0
+unitest82:
+v1:
+	0
+unitest83:
+v1:
+	0
+unitest84:
+v1:
+	0
+unitest85:
+v1:
+	0
+unitest86:
+v1:
+	0
+unitest87:
+v1:
+	0
+unitest88:
+v1:
+	0
+unitest89:
+v1:
+	0
+unitest90:
+v1:
+	0
+unitest91:
+v1:
+	0
+unitest92:
+v1:
+	0
+unitest93:
+v1:
+	0
+unitest94:
+v1:
+	0
+unitest95:
+v1:
+	0
+unitest96:
+v1:
+	0
+unitest97:
+v1:
+	0
+unitest98:
+v1:
+	0
+unitest99:
+v1:
+	0
+unitest100:
+v1:
+	0
+unitest101:
+v1:
+	0
+unitest102:
+v1:
+	0
+unitest103:
+v1:
+	0
+unitest104:
+v1:
+	0
+unitest105:
+v1:
+	0
+unitest106:
+v1:
+	0
+unitest107:
+v1:
+	0
+unitest108:
+v1:
+	0
+unitest109:
+v1:
+	0
+unitest110:
+v1:
+	0
+unitest111:
+v1:
+	0
+unitest112:
+v1:
+	0
+unitest113:
+v1:
+	0
+unitest114:
+v1:
+	0
+unitest115:
+v1:
+	0
+unitest116:
+v1:
+	0
+unitest117:
+v1:
+	0
+unitest118:
+v1:
+	0
+unitest119:
+v1:
+	0
+unitest120:
+v1:
+	0
+unitest121:
+v1:
+	0
+unitest122:
+v1:
+	0
+unitest123:
+v1:
+	0
+unitest124:
+v1:
+	0
+unitest125:
+v1:
+	0
+unitest126:
+v1:
+	0
+unitest127:
+v1:
+	0
+unitest128:
+v1:
+	0
+unitest129:
+v1:
+	0
+unitest130:
+v1:
+	0
+unitest131:
+v1:
+	0
+unitest132:
+v1:
+	0
+unitest133:
+v1:
+	0
+unitest134:
+v1:
+	0
+unitest135:
+v1:
+	0
+unitest136:
+v1:
+	0
+unitest137:
+v1:
+	0
+unitest138:
+v1:
+	0
+unitest139:
+v1:
+	0
+unitest140:
+v1:
+	0
+unitest141:
+v1:
+	0
+unitest142:
+v1:
+	0
+unitest143:
+v1:
+	0
+unitest144:
+v1:
+	0
+unitest145:
+v1:
+	0
+unitest146:
+v1:
+	0
+unitest147:
+v1:
+	0
+unitest148:
+v1:
+	0
+unitest149:
+v1:
+	0
+unitest150:
+v1:
+	0
+unitest151:
+v1:
+	0
+unitest152:
+v1:
+	0
+unitest153:
+v1:
+	0
+unitest154:
+v1:
+	0
+unitest155:
+v1:
+	0
+unitest156:
+v1:
+	0
+unitest157:
+v1:
+	0
+unitest158:
+v1:
+	0
+unitest159:
+v1:
+	0
+unitest160:
+v1:
+	0
+unitest161:
+v1:
+	0
+unitest162:
+v1:
+	0
+unitest163:
+v1:
+	0
+unitest164:
+v1:
+	0
+unitest165:
+v1:
+	0
+unitest166:
+v1:
+	0
+unitest167:
+v1:
+	0
+unitest168:
+v1:
+	0
+unitest169:
+v1:
+	0
+unitest170:
+v1:
+	0
+unitest171:
+v1:
+	0
+unitest172:
+v1:
+	0
+unitest173:
+v1:
+	0
+unitest174:
+v1:
+	0
+unitest175:
+v1:
+	0
+unitest176:
+v1:
+	0
+unitest177:
+v1:
+	0
+unitest178:
+v1:
+	0
+unitest179:
+v1:
+	0
+unitest180:
+v1:
+	0
+unitest181:
+v1:
+	0
+unitest182:
+v1:
+	0
+unitest183:
+v1:
+	0
+unitest184:
+v1:
+	0
+unitest185:
+v1:
+	0
+unitest186:
+v1:
+	0
+unitest187:
+v1:
+	0
+unitest188:
+v1:
+	0
+unitest189:
+v1:
+	0
+unitest190:
+v1:
+	0
+unitest191:
+v1:
+	0
+unitest192:
+v1:
+	0
+unitest193:
+v1:
+	0
+unitest194:
+v1:
+	0
+unitest195:
+v1:
+	0
+unitest196:
+v1:
+	0
+unitest197:
+v1:
+	0
+unitest198:
+v1:
+	0

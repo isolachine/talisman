@@ -1,0 +1,9 @@
+The replace SIR object is a member of the Siemens suite of test subjects.
+Originally this subject was written for execution under the Sun Microsystems
+operating systems (SunOS and Solaris.)  While initially written and executed
+on a SunOS4.3 platform and using an unknown compiler, we have found that one
+of these inserted faults, v32, is no longer revealed.  When this subject was
+originally packaged by the SIR 30 of the tests would reveal the v32 fault.
+We can no longer recreate this fault's failing behavior on modern systems,
+where it appears that no tests now reveal this fault.
+Jan 6, 2015 - wdm

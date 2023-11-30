@@ -1,0 +1,4 @@
+Versions v4,v5,v6 are versions v5,v6,v9 from the bash_flty_versions.tar.gz
+archive. Versions v4,v7,v8 were removed due to insufficient regression
+differences.
+

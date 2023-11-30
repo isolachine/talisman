@@ -1,0 +1,51 @@
+; ModuleID = '<stdin>'
+target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-macosx10.14.0"
+
+@.str = private unnamed_addr constant [2 x i8] c" \00", align 1
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @function(i32 %key, i32 %key2) #0 {
+entry:
+  %call = tail call i64 @time(i64* null) #2
+  %conv = trunc i64 %call to i32
+  tail call void @srand(i32 %conv) #2
+  %call1 = tail call i32 @rand() #2
+  %add = add nsw i32 %call1, %key2
+  %cmp6 = icmp sgt i32 %add, 1
+  br i1 %cmp6, label %for.body.lr.ph, label %for.end
+
+for.body.lr.ph:                                   ; preds = %entry
+  %0 = add i32 %call1, %key2
+  br label %for.body
+
+for.body:                                         ; preds = %for.body, %for.body.lr.ph
+  %u.07 = phi i32 [ 1, %for.body.lr.ph ], [ %inc, %for.body ]
+  %putchar = tail call i32 @putchar(i32 32) #2
+  %inc = add nuw nsw i32 %u.07, 1
+  %exitcond = icmp eq i32 %inc, %0
+  br i1 %exitcond, label %for.end, label %for.body
+
+for.end:                                          ; preds = %for.body, %entry
+  %u.0.lcssa = phi i32 [ 1, %entry ], [ %0, %for.body ]
+  ret i32 %u.0.lcssa
+}
+
+declare void @srand(i32) #1
+
+declare i64 @time(i64*) #1
+
+declare i32 @rand() #1
+
+; Function Attrs: nounwind
+declare i32 @putchar(i32) #2
+
+attributes #0 = { nounwind ssp uwtable "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="core2" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="core2" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #2 = { nounwind }
+
+!llvm.module.flags = !{!0}
+!llvm.ident = !{!1}
+
+!0 = !{i32 1, !"PIC Level", i32 2}
+!1 = !{!"clang version 3.7.0 (trunk) (git@git.psu.edu:dbz5017/LLVM-Deps.git dfce73fe0831457cbc5c1a8f7788dfcbd809ad99)"}

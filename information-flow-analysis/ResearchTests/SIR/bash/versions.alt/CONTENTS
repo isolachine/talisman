@@ -1,0 +1,29 @@
+This directory contains the original subject source code. It also contains
+variants of the original source. 
+
+versions.orig
+-------------
+	Sub-directories: v0, v1, v2, v3, v4, v5
+	6 in-order versions of GNU Bash. 
+	v0 - 2.0
+	v1 - 2.01
+	v2 - 2.01.1
+	v3 - 2.02
+	v4 - 2.03
+	v5 - 2.04
+	v6 - 2.05
+
+versions.seeded
+--------------
+	Sub-directories: v1, v2, v3, v4, v5, v6
+	All are seeded versions of the sub-directories in versions.orig. 
+
+	december 2001 (praveen kallakuri):
+	v0-v5 updated with additional atexit calls in all c-files with main 
+	functions
+	added v6-v9
+
+	august 2006 (jeffrey deal);
+	removed versions v4,v7,v8 and refactored versions v5,v6,v9 to become
+        v4,v5,v6 respectively.
+

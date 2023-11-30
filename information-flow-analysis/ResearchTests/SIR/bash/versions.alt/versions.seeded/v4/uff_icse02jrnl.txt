@@ -1,0 +1,12 @@
+set_pipestatus_array--./variables.c	FAULTY_F_KP_1
+parse_and_execute--./builtins/evalstring.c	FAULTY_F_KP_10
+full_pathname--./general.c	FAULTY_F_KP_3
+put_command_name_into_env--./variables.c	FAULTY_F_KP_9
+make_command_string_internal--./print_cmd.c	FAULTY_F_SK_1
+decode_prompt_string--./y.tab.c	FAULTY_F_SK_5
+pat_subst--./subst.c	FAULTY_F_SK_6
+glob_expand_word_list--./subst.c	FAULTY_F_SPK_1
+update_export_env_inplace--./variables.c	FAULTY_F_SPK_4
+make_command_string_internal--./print_cmd.c	FAULTY_F_KP_2
+execute_subshell_builtin_or_function--./execute_cmd.c	FAULTY_F_SK_10
+gmatch--./lib/glob/fnmatch.c	FAULTY_F_SPK_3

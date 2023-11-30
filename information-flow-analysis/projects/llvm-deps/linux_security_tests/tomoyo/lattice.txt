@@ -1,0 +1,3 @@
+C purpose subject object operation policy
+L source mediator input external
+L value static k-static dynamic

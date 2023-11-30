@@ -1,0 +1,2475 @@
+
+Test Case 1  		<single>
+>> Pattern size                                        :  single character(no metacharacter) <<
+UniverseLine: -P[-n I ../inputs/grep1.dat]
+
+
+Test Case 2  		<single>
+>> Pattern size                                        :  longer than any line in the file <<
+UniverseLine: -P[-n "/* The following list maps the names of the Posix named character classes   static int laststart;True if we're separated from beginning or (, |" ../inputs/grep1.dat]
+
+
+Test Case 3  		<error>
+>> Pattern size                                        :  newline <<
+UniverseLine: -P[-c "/n" ../inputs/grep1.dat]
+
+
+/*Test Case 4  		<error>
+>> Quoting                                             :  pattern is improperly quoted <<
+#niverseLine: -P['include" ../inputs/grep1.dat]<<*/
+/* Interrupt test script */
+
+
+Test Case 5  		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+                                                          pattern is single quoted
+>> Embedded blanks                                     :  one embedded blank <<
+UniverseLine: -P[-b 'static int' ../inputs/grep1.dat]
+
+
+Test Case 6  		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+                                                          pattern is single quoted
+>> Embedded blanks                                     :  several embedded blanks <<
+UniverseLine: -P['if (! lexleft)' ../inputs/grep1.dat]
+
+
+Test Case 7  		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+>> Embedded quotes                                     :  enbedded pairs of double quotes <<
+UniverseLine: -P[-G ' ":xdigit:\]", is_xdigit' ../inputs/grep1.dat]
+
+
+Test Case 8  		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+>> Embedded quotes                                     :  enbedded pairs of single quotes <<
+UniverseLine: -P["case ')':" ../inputs/grep1.dat]
+
+Test Case 9  		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+>> Embedded quotes                                     :  one embedded single quote <<
+UniverseLine: -P["< PEND'" ../inputs/grep1.dat]
+
+
+Test Case 10 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+>> Embedded quotes                                     :  one embedded double quote <<
+UniverseLine: -P[-G ' ":xdigit:\]' ../inputs/grep1.dat]
+
+
+/*Test Case 11 		<error>
+>> Embedded quotes                                     :  one single and one double embedded quotes <<
+#niverseLine: -P[-G "but" for 'two " ../inputs/grep1.dat] <<*/
+/* Interrupt test script */
+
+Test Case 12 		<single>
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is not quoted
+>> Pattern selection                                   :  -f FILE<<
+UniverseLine: -P[-f ../inputs/grep0.dat ../inputs/grep1.dat]
+#Can't use lines that have special charactor in a file.
+
+
+Test Case 13 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Pattern selection                                   :  -w <<
+UniverseLine: -P[-w in ../inputs/grep1.dat]
+
+
+Test Case 14 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Pattern selection                                   :  -x <<
+UniverseLine: -P[-x "  return" ../inputs/grep1.dat]
+
+
+Test Case 15 		<single>
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is not quoted
+>> Miscellaneous                                       :  -V <<
+UniverseLine: -P[-V]
+
+
+/*Test Case 16 		<single>
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is not quoted
+>> Miscellaneous                                       :  --help <<
+#niverseLine: -P[--help] */ 
+/* In this version --help doesn't work */
+
+
+Test Case 17 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Context control                                     :  -B NUM<<
+UniverseLine: -P[-B 2 return ../inputs/grep1.dat]
+
+
+Test Case 18 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Context control                                     :  -A NUM <<
+UniverseLine: -P[-A 2 return ../inputs/grep1.dat]
+
+
+Test Case 19 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Context control                                     :  -B NUM && -A NUM <<
+UniverseLine: -P[-B 2 -A 3 return ../inputs/grep1.dat]
+
+
+Test Case 20 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Context control                                     :  -C <<
+UniverseLine: -P[-C return ../inputs/grep1.dat]
+
+
+Test Case 21 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Context control                                     :  -NUM <<
+UniverseLine: -P[-3 return ../inputs/grep1.dat]
+
+
+Test Case 22 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Output control (a) (note - use SingleQuoted, Double :  -q <<
+UniverseLine: -P[-q include ../inputs/grep1.dat]
+
+
+Test Case 23 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Parameter-File or dir name (include an error item)  :  omitted <<
+UniverseLine: -P[-c include] -I[grep1.dat]
+
+
+Test Case 24 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+>> Parameter-File or dir name (include an error item)  :  - (same as omitted) <<
+UniverseLine: -P[-c include -] -I[grep1.dat] 
+
+
+Test Case 25 		<single>
+   Pattern size                                        :  empty
+                                                          single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+                                                          pattern is single quoted
+   Parameter-File or dir name (include an error item)  :  non-exits name
+>> Suppress error messages                             :  -s<<
+UniverseLine: -P[-s 'return' ../inputs/grepNon.dat]
+
+
+
+Test Case 26 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+                                                          pattern is single quoted
+                                                          pattern is not quoted
+   Output control (a) (note - use SingleQuoted, Double :  -L
+                                                          -l
+                                                          -n
+                                                          -c
+                                                          no output control(a)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+                                                          several valid text file names
+>> Number of occurrence of pattern in file or dir      :  none <<
+UniverseLine: -P[-c TGGG ../inputs/grep1.dat]
+
+
+Test Case 27 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+                                                          pattern is single quoted
+                                                          pattern is not quoted
+   Output control (a) (note - use SingleQuoted, Double :  -L
+                                                          -l
+                                                          -n
+                                                          -c
+                                                          no output control(a)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+                                                          several valid text file names
+>> Number of occurrence of pattern in file or dir      :  exactly one <<
+UniverseLine: -P['When group 3 ends' ../inputs/grep1.dat]
+
+
+Test Case 28 		<single>
+   Pattern size                                        :  single character(no metacharacter)
+                                                          many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+                                                          pattern is single quoted
+                                                          pattern is not quoted
+   Output control (a) (note - use SingleQuoted, Double :  -L
+                                                          -l
+                                                          -n
+                                                          -c
+                                                          no output control(a)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+                                                          several valid text file names
+   Number of occurrence of pattern in file or dir      :  more than one
+>> Pattern occurrence on target line                   :  more than one <<
+UniverseLine: -P[size ../inputs/grep1.dat]
+
+
+Test Case 29 		(Key = 1.1.0.0.0.2.0.0.1.0.0.3.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  non-exits name
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-L "" ../inputs/grepNon.dat]
+
+
+Test Case 30 		(Key = 1.1.0.0.0.2.0.0.1.0.0.5.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-L "" ../inputs/grep1.dat]
+
+
+Test Case 31 		(Key = 1.1.0.0.0.2.0.0.1.0.0.6.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-L "" ../inputs/grep*.dat]
+
+
+Test Case 32 		(Key = 1.1.0.0.0.2.0.0.6.0.0.3.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  non-exits name
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-c "" ../inputs/grepNon.dat]
+
+
+Test Case 33 		(Key = 1.1.0.0.0.2.0.0.6.0.0.5.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-c "" ../inputs/grep1.dat]
+
+Test Case 34 		(Key = 1.1.0.0.0.2.0.0.6.0.0.6.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-c "" ../inputs/grep*.dat]
+
+
+Test Case 35 		(Key = 1.2.0.0.0.2.0.0.3.1.1.3.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  non-exits name
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-nbh '' ../inputs/grepNon.dat]
+
+
+Test Case 36 		(Key = 1.2.0.0.0.2.0.0.3.1.1.5.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-nbh '' ../inputs/grep1.dat]
+
+
+Test Case 37 		(Key = 1.2.0.0.0.2.0.0.3.1.1.6.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  <n/a>
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  <n/a>
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-nbh '' ../inputs/grep*.dat]
+
+
+Test Case 38 		(Key = 1.3.0.0.1.2.1.0.2.0.0.5.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  -e PATTERN
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-ile --beg ../inputs/grep1.dat]
+
+
+Test Case 39 		(Key = 1.3.0.0.1.2.1.0.2.0.0.6.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  -e PATTERN
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-ile --beg ../inputs/grep*.dat]
+
+
+Test Case 40 		(Key = 1.3.0.0.1.2.1.0.5.0.0.7.0.0.0.)
+   Pattern size                                        :  empty
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  <n/a>
+   Embedded quotes                                     :  <n/a>
+   Pattern selection                                   :  -e PATTERN
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  <n/a>
+   Output control (a) (note - use SingleQuoted, Double :  -r
+   Output control (b)                                  :  <n/a>
+   Output control (c)                                  :  <n/a>
+   Parameter-File or dir name (include an error item)  :  directory name
+   Suppress error messages                             :  <n/a>
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+#niverseLine: -P[-ire --beg ../inputs/grepDir]
+
+
+Test Case 41 		(Key = 3.1.1.1.5.1.1.6.1.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ivL "include" ../inputs/grep1.dat]
+
+
+
+Test Case 42 		(Key = 3.1.1.1.5.1.1.6.1.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ivL "struct trie" ../inputs/grep*.dat]
+
+
+Test Case 43 		(Key = 3.1.1.1.5.1.1.6.6.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ivc "include" ../inputs/grep1.dat]
+
+
+Test Case 44 		(Key = 3.1.1.1.5.1.1.6.6.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ivc "include" ../inputs/grep*.dat]
+
+
+Test Case 45 		(Key = 3.1.1.1.5.1.4.6.1.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vL "include" ../inputs/grep1.dat]
+
+
+Test Case 46 		(Key = 3.1.1.1.5.1.4.6.1.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vL "include" ../inputs/grep*.dat]
+
+
+Test Case 47 		(Key = 3.1.1.1.5.1.4.6.6.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vc "include" ../inputs/grep1.dat]
+
+
+Test Case 48 		(Key = 3.1.1.1.5.1.4.6.6.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vc "include" ../inputs/grep*.dat]
+
+
+Test Case 49 		(Key = 3.1.1.1.5.2.1.6.1.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-iL "include" ../inputs/grep1.dat]
+
+
+Test Case 50 		(Key = 3.1.1.1.5.2.1.6.1.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-iL "include" ../inputs/grep*.dat]
+
+
+Test Case 51 		(Key = 3.1.1.1.5.2.1.6.6.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ic "include" ../inputs/grep1.dat]
+
+
+Test Case 52 		(Key = 3.1.1.1.5.2.1.6.6.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ic "include" ../inputs/grep*.dat]
+
+
+Test Case 53 		(Key = 3.1.1.1.5.2.4.6.1.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-L "include" ../inputs/grep1.dat]
+
+
+Test Case 54 		(Key = 3.1.1.1.5.2.4.6.1.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -L
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-L "include" ../inputs/grep*.dat]
+
+
+Test Case 55 		(Key = 3.1.1.1.5.2.4.6.6.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-c "include" ../inputs/grep1.dat]
+
+
+Test Case 56 		(Key = 3.1.1.1.5.2.4.6.6.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is double quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -c
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-c "include" ../inputs/grep*.dat]
+
+
+Test Case 57 		(Key = 3.2.1.1.5.1.1.6.3.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vinbh 'include' ../inputs/grep1.dat]
+
+
+Test Case 58 		(Key = 3.2.1.1.5.1.1.6.3.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vinbh 'include' ../inputs/grep*.dat]
+
+
+Test Case 59 		(Key = 3.2.1.1.5.1.1.6.3.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vinb 'include' ../inputs/grep1.dat]
+
+
+Test Case 60 		(Key = 3.2.1.1.5.1.1.6.3.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vinb 'include' ../inputs/grep*.dat]
+
+
+Test Case 61 		(Key = 3.2.1.1.5.1.1.6.3.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vinh 'include' ../inputs/grep1.dat]
+
+
+Test Case 62 		(Key = 3.2.1.1.5.1.1.6.3.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vinh 'include' ../inputs/grep*.dat]
+
+
+Test Case 63 		(Key = 3.2.1.1.5.1.1.6.3.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vin 'include' ../inputs/grep1.dat]
+
+
+Test Case 64 		(Key = 3.2.1.1.5.1.1.6.3.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vin 'include' ../inputs/grep*.dat]
+
+
+Test Case 65 		(Key = 3.2.1.1.5.1.4.6.3.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vbhn 'include' ../inputs/grep1.dat]
+
+
+Test Case 66 		(Key = 3.2.1.1.5.1.4.6.3.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vbhn 'include' ../inputs/grep*.dat]
+
+
+Test Case 67 		(Key = 3.2.1.1.5.1.4.6.3.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vbn 'include' ../inputs/grep1.dat]
+
+
+Test Case 68 		(Key = 3.2.1.1.5.1.4.6.3.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vbn 'include' ../inputs/grep*.dat]
+
+
+Test Case 69 		(Key = 3.2.1.1.5.1.4.6.3.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vnh 'include' ../inputs/grep1.dat]
+
+
+Test Case 70 		(Key = 3.2.1.1.5.1.4.6.3.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vnh 'include' ../inputs/grep*.dat]
+
+
+Test Case 71 		(Key = 3.2.1.1.5.1.4.6.3.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vn 'include' ../inputs/grep1.dat]
+
+
+Test Case 72 		(Key = 3.2.1.1.5.1.4.6.3.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vn 'include' ../inputs/grep*.dat]
+
+
+Test Case 73 		(Key = 3.2.1.1.5.2.1.6.3.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-inbh 'include' ../inputs/grep1.dat]
+
+
+Test Case 74 		(Key = 3.2.1.1.5.2.1.6.3.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-inbh 'include' ../inputs/grep*.dat]
+
+
+Test Case 75 		(Key = 3.2.1.1.5.2.1.6.3.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-inb 'include' ../inputs/grep1.dat]
+
+
+Test Case 76 		(Key = 3.2.1.1.5.2.1.6.3.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-inb 'include' ../inputs/grep*.dat]
+
+
+Test Case 77 		(Key = 3.2.1.1.5.2.1.6.3.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-inh 'include' ../inputs/grep1.dat]
+
+
+Test Case 78 		(Key = 3.2.1.1.5.2.1.6.3.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-inh 'include' ../inputs/grep*.dat]
+
+
+Test Case 79 		(Key = 3.2.1.1.5.2.1.6.3.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-in 'include' ../inputs/grep1.dat]
+
+
+Test Case 80 		(Key = 3.2.1.1.5.2.1.6.3.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-in 'include' ../inputs/grep*.dat]
+
+
+Test Case 81 		(Key = 3.2.1.1.5.2.4.6.3.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-nbh 'include' ../inputs/grep1.dat]
+
+
+Test Case 82 		(Key = 3.2.1.1.5.2.4.6.3.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-nbh 'include' ../inputs/grep*.dat]
+
+
+Test Case 83 		(Key = 3.2.1.1.5.2.4.6.3.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-nb 'include' ../inputs/grep1.dat]
+
+
+Test Case 84 		(Key = 3.2.1.1.5.2.4.6.3.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-nb 'include' ../inputs/grep*.dat]
+
+
+Test Case 85 		(Key = 3.2.1.1.5.2.4.6.3.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-nh 'include' ../inputs/grep1.dat]
+
+
+Test Case 86 		(Key = 3.2.1.1.5.2.4.6.3.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-nh 'include' ../inputs/grep*.dat]
+
+
+Test Case 87 		(Key = 3.2.1.1.5.2.4.6.3.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-n 'include' ../inputs/grep1.dat]
+
+
+Test Case 88 		(Key = 3.2.1.1.5.2.4.6.3.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is single quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -n
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-n 'include' ../inputs/grep*.dat]
+
+
+Test Case 89 		(Key = 3.3.1.1.5.1.1.6.2.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vil 'include' ../inputs/grep1.dat]
+
+
+Test Case 90 		(Key = 3.3.1.1.5.1.1.6.2.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vil 'include' ../inputs/grep*.dat]
+
+
+Test Case 91 		(Key = 3.3.1.1.5.1.1.6.5.2.2.7.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -r
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  directory name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+#niverseLine: -P[-vir TGGGG ../inputs/grepDir]
+
+
+Test Case 92 		(Key = 3.3.1.1.5.1.1.6.7.1.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vibh TGGGG ../inputs/grepBinary]
+
+
+Test Case 93 		(Key = 3.3.1.1.5.1.1.6.7.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vibh include ../inputs/grep1.dat]
+
+
+Test Case 94 		(Key = 3.3.1.1.5.1.1.6.7.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vibh include ../inputs/grep*.dat]
+
+
+Test Case 95 		(Key = 3.3.1.1.5.1.1.6.7.1.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vib TGGGG ../inputs/grepBinary]
+
+
+Test Case 96 		(Key = 3.3.1.1.5.1.1.6.7.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vib include ../inputs/grep1.dat]
+
+
+Test Case 97 		(Key = 3.3.1.1.5.1.1.6.7.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vib include ../inputs/grep*.dat]
+
+
+Test Case 98 		(Key = 3.3.1.1.5.1.1.6.7.2.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vih TGGGG ../inputs/grepBinary]
+
+
+Test Case 99 		(Key = 3.3.1.1.5.1.1.6.7.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vih include ../inputs/grep1.dat]
+
+Test Case 100		(Key = 3.3.1.1.5.1.1.6.7.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vih include ../inputs/grep*.dat]
+
+
+Test Case 101		(Key = 3.3.1.1.5.1.1.6.7.2.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vi TGGGG ../inputs/grepBinary]
+
+
+Test Case 102		(Key = 3.3.1.1.5.1.1.6.7.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vi include ../inputs/grep1.dat]
+
+
+Test Case 103		(Key = 3.3.1.1.5.1.1.6.7.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vi include ../inputs/grep*.dat]
+
+
+Test Case 104		(Key = 3.3.1.1.5.1.4.6.2.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vl include ../inputs/grep1.dat]
+
+
+Test Case 105		(Key = 3.3.1.1.5.1.4.6.2.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vl include ../inputs/grep*.dat]
+
+
+Test Case 106		(Key = 3.3.1.1.5.1.4.6.5.2.2.7.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -r
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  directory name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+#niverseLine: -P[-vr Tgggg ../inputs/grepDir]
+/* -r ilegle */
+
+Test Case 107		(Key = 3.3.1.1.5.1.4.6.7.1.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vbh Tgggg ../inputs/grepBinary]
+
+
+Test Case 108		(Key = 3.3.1.1.5.1.4.6.7.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vbh include ../inputs/grep1.dat]
+
+
+Test Case 109		(Key = 3.3.1.1.5.1.4.6.7.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vbh include ../inputs/grep*.dat]
+
+
+Test Case 110		(Key = 3.3.1.1.5.1.4.6.7.1.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vb Tgggg ../inputs/grepBinary]
+
+
+Test Case 111		(Key = 3.3.1.1.5.1.4.6.7.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vb include ../inputs/grep1.dat]
+
+
+Test Case 112		(Key = 3.3.1.1.5.1.4.6.7.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vb include ../inputs/grep*.dat]
+
+
+Test Case 113		(Key = 3.3.1.1.5.1.4.6.7.2.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-vh Tgggg ../inputs/grepBinary]
+
+Test Case 114		(Key = 3.3.1.1.5.1.4.6.7.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vh include ../inputs/grep1.dat]
+
+Test Case 115		(Key = 3.3.1.1.5.1.4.6.7.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-vh include ../inputs/grep*.dat]
+
+Test Case 116		(Key = 3.3.1.1.5.1.4.6.7.2.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-v Tgggg ../inputs/grepBinary]
+
+Test Case 117		(Key = 3.3.1.1.5.1.4.6.7.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-v include ../inputs/grep1.dat]
+
+Test Case 118		(Key = 3.3.1.1.5.1.4.6.7.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  with -v
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-v include ../inputs/grep*.dat]
+
+Test Case 119		(Key = 3.3.1.1.5.2.1.6.2.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-il include ../inputs/grep1.dat]
+
+Test Case 120		(Key = 3.3.1.1.5.2.1.6.2.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-il include ../inputs/grep*.dat]
+
+Test Case 121		(Key = 3.3.1.1.5.2.1.6.5.2.2.7.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -r
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  directory name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+#niverseLine: -P[-ir Tggggggg ../inputs/grepDir]
+
+Test Case 122		(Key = 3.3.1.1.5.2.1.6.7.1.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-ibh Tgggg ../inputs/grepBinary]
+
+Test Case 123		(Key = 3.3.1.1.5.2.1.6.7.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ibh include ../inputs/grep1.dat]
+
+Test Case 124		(Key = 3.3.1.1.5.2.1.6.7.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ibh include ../inputs/grep*.dat]
+
+Test Case 125		(Key = 3.3.1.1.5.2.1.6.7.1.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-ib Tgggg ../inputs/grepBinary]
+
+Test Case 126		(Key = 3.3.1.1.5.2.1.6.7.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ib include ../inputs/grep1.dat]
+
+Test Case 127		(Key = 3.3.1.1.5.2.1.6.7.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ib include ../inputs/grep*.dat]
+
+Test Case 128		(Key = 3.3.1.1.5.2.1.6.7.2.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-ih Tgggg ../inputs/grepBinary]
+
+Test Case 129		(Key = 3.3.1.1.5.2.1.6.7.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ih include ../inputs/grep1.dat]
+
+Test Case 130		(Key = 3.3.1.1.5.2.1.6.7.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-ih include ../inputs/grep*.dat]
+
+Test Case 131		(Key = 3.3.1.1.5.2.1.6.7.2.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-i Tgggg ../inputs/grepBinary]
+
+Test Case 132		(Key = 3.3.1.1.5.2.1.6.7.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-i include ../inputs/grep1.dat]
+
+Test Case 133		(Key = 3.3.1.1.5.2.1.6.7.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  -i, -y
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-i include ../inputs/grep*.dat]
+
+Test Case 134		(Key = 3.3.1.1.5.2.4.6.2.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-l include ../inputs/grep1.dat]
+
+Test Case 135		(Key = 3.3.1.1.5.2.4.6.2.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -l
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-l include ../inputs/grep*.dat]
+
+Test Case 136		(Key = 3.3.1.1.5.2.4.6.5.2.2.7.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  -r
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  directory name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+#niverseLine: -P[-r iggggggggg ../inputs/grepDir]
+
+Test Case 137		(Key = 3.3.1.1.5.2.4.6.7.1.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-bh Tgggg ../inputs/grepBinary]
+
+Test Case 138		(Key = 3.3.1.1.5.2.4.6.7.1.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-bh include ../inputs/grep1.dat]
+
+Test Case 139		(Key = 3.3.1.1.5.2.4.6.7.1.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-bh include ../inputs/grep*.dat]
+
+Test Case 140		(Key = 3.3.1.1.5.2.4.6.7.1.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-b Tgggg ../inputs/grepBinary]
+
+Test Case 141		(Key = 3.3.1.1.5.2.4.6.7.1.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-b include ../inputs/grep1.dat]
+
+Test Case 142		(Key = 3.3.1.1.5.2.4.6.7.1.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  -b
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-b include ../inputs/grep*.dat]
+
+Test Case 143		(Key = 3.3.1.1.5.2.4.6.7.2.1.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[-h Tgggg ../inputs/grepBinary]
+
+Test Case 144		(Key = 3.3.1.1.5.2.4.6.7.2.1.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-h include ../inputs/grep1.dat]
+
+Test Case 145		(Key = 3.3.1.1.5.2.4.6.7.2.1.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  -h
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[-h include ../inputs/grep*.dat]
+
+Test Case 146		(Key = 3.3.1.1.5.2.4.6.7.2.2.4.2.0.0.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  binary file name
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  <n/a>
+   Pattern occurrence on target line                   :  <n/a>
+UniverseLine: -P[Tgggg ../inputs/grepBinary]
+
+Test Case 147		(Key = 3.3.1.1.5.2.4.6.7.2.2.5.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  one valid text file name (assume -h)
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[include ../inputs/grep1.dat]
+
+Test Case 148		(Key = 3.3.1.1.5.2.4.6.7.2.2.6.2.3.1.)
+   Pattern size                                        :  many characters(no metacharacters)
+   Quoting                                             :  pattern is not quoted
+   Embedded blanks                                     :  no embedded blank
+   Embedded quotes                                     :  no enbedded quotes
+   Pattern selection                                   :  no Pattern selection
+   Reverse control                                     :  without -v 
+   Miscellaneous                                       :  no miscellaneous option
+   Context control                                     :  no context control
+   Output control (a) (note - use SingleQuoted, Double :  no output control(a)
+   Output control (b)                                  :  no output control(b)
+   Output control (c)                                  :  no output control(c)
+   Parameter-File or dir name (include an error item)  :  several valid text file names
+   Suppress error messages                             :  without -s
+   Number of occurrence of pattern in file or dir      :  more than one
+   Pattern occurrence on target line                   :  one
+UniverseLine: -P[include ../inputs/grep*.dat]

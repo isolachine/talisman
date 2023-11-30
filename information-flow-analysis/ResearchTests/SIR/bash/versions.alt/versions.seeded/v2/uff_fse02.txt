@@ -1,0 +1,9 @@
+waitchld--./jobs.c	FAULTY_F_KP_1	1
+assign_array_from_string--./variables.c	FAULTY_F_SPK_1	2
+set_default_locale--./locale.c	FAULTY_F_KP_7	3
+history_do_write--./lib/readline/histfile.c	FAULTY_F_SK_10	4
+polite_directory_format--./general.c	FAULTY_F_KP_10	0
+verify_substring_values--./subst.c	FAULTY_F_SK_2	0
+expand_word_internal--./subst.c	FAULTY_F_SPK_3	5
+add_mail_file--./mailcheck.c	FAULTY_F_SK_7	6
+decode_signal--./trap.c	FAULTY_F_KP_2	7

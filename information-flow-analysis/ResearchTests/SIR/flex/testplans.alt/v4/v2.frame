@@ -1,0 +1,3315 @@
+
+Test Case 1  		<single>
+   Definitions :  Options
+UniverseLine: -P[error -o../outputs/out2.n1 ../inputs/in.opt] -F[error|err2.n1] -C[V2.n1]
+
+
+Test Case 2  		<single>
+   Patterns :  POSIX Character
+UniverseLine: -P[error -o../outputs/out2.n2 ../inputs/in.posix] -F[error|err2.n2] -C[V2.n2]
+
+
+Test Case 3  		<single>
+   Patterns :  StartConditionScope
+UniverseLine: -P[error -o../outputs/out2.n3 ../inputs/in.start] -F[error|err2.n3] -C[V2.n3]
+
+
+Test Case 4  		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Crae -o../outputs/out2.n4 ../inputs/in.0] -F[error|err2.n4] -C[V2.n4]
+
+
+Test Case 5  		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Cra -o../outputs/out2.n5 ../inputs/in.posix_1] -F[error|err2.n5] -C[V2.n5]
+
+
+Test Case 6  		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Cre -o../outputs/out2.n6 ../inputs/in.posix_2] -F[error|err2.n6] -C[V2.n6]
+
+
+Test Case 7  		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Cr -o../outputs/out2.n7 ../inputs/in.posix_3] -F[error|err2.n7] -C[V2.n7]
+
+
+Test Case 8  		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Crae -o../outputs/out2.n8 ../inputs/in.posix_4] -F[error|err2.n8] -C[V2.n8]
+
+
+Test Case 9  		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Cra -o../outputs/out2.n9 ../inputs/in.posix_4] -F[error|err2.n9] -C[V2.n9]
+
+
+Test Case 10 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Cre -o../outputs/out2.n10 ../inputs/in.0] -F[error|err2.n10] -C[V2.n10]
+
+
+Test Case 11 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.1.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Cr -o../outputs/out2.n11 ../inputs/in.0] -F[error|err2.n11] -C[V2.n11]
+
+
+Test Case 12 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Craem -o../outputs/out2.n12 ../inputs/in.0] -F[error|err2.n12] -C[V2.n12]
+
+
+Test Case 13 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Craem -o../outputs/out2.n13 ../inputs/in.0] -F[error|err2.n13] -C[V2.n13]
+
+
+Test Case 14 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Crae -o../outputs/out2.n14 ../inputs/in.0] -F[error|err2.n14] -C[V2.n14]
+
+
+Test Case 15 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Crae -o../outputs/out2.n15 ../inputs/in.0] -F[error|err2.n15] -C[V2.n15]
+
+
+Test Case 16 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cram -o../outputs/out2.n16 ../inputs/in.0] -F[error|err2.n16] -C[V2.n16]
+
+
+Test Case 17 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cram -o../outputs/out2.n17 ../inputs/in.0] -F[error|err2.n17] -C[V2.n17]
+
+
+Test Case 18 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cra -o../outputs/out2.n18 ../inputs/in.0] -F[error|err2.n18] -C[V2.n18]
+
+
+Test Case 19 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cra -o../outputs/out2.n19 ../inputs/in.0] -F[error|err2.n19] -C[V2.n19]
+
+
+Test Case 20 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Crem -o../outputs/out2.n20 ../inputs/in.0] -F[error|err2.n20] -C[V2.n20]
+
+
+Test Case 21 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Crem -o../outputs/out2.n21 ../inputs/in.0] -F[error|err2.n21] -C[V2.n21]
+
+
+Test Case 22 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cre -o../outputs/out2.n22 ../inputs/in.0] -F[error|err2.n22] -C[V2.n22]
+
+
+Test Case 23 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cre -o../outputs/out2.n23 ../inputs/in.0] -F[error|err2.n23] -C[V2.n23]
+
+
+Test Case 24 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Crm -o../outputs/out2.n24 ../inputs/in.0] -F[error|err2.n24] -C[V2.n24]
+
+
+Test Case 25 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Crm -o../outputs/out2.n25 ../inputs/in.0] -F[error|err2.n25] -C[V2.n25]
+
+
+Test Case 26 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cr -o../outputs/out2.n26 ../inputs/in.0] -F[error|err2.n26] -C[V2.n26]
+
+
+Test Case 27 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.3.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cr -o../outputs/out2.n27 ../inputs/in.0] -F[error|err2.n27] -C[V2.n27]
+
+
+Test Case 28 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Cae -o../outputs/out2.n28 ../inputs/in.0] -F[error|err2.n28] -C[V2.n28]
+
+
+Test Case 29 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Ca -o../outputs/out2.n29 ../inputs/in.0] -F[error|err2.n29] -C[V2.n29]
+
+
+Test Case 30 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -Ce -o../outputs/out2.n30 ../inputs/in.0] -F[error|err2.n30] -C[V2.n30]
+
+
+Test Case 31 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -df -o../outputs/out2.n31 ../inputs/in.0] -F[error|err2.n31] -C[V2.n31]
+
+
+Test Case 32 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FullScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cf -o../outputs/out2.n32 ../inputs/in.0] -F[error|err2.n32] -C[V2.n32]
+
+
+Test Case 33 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.1.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Cae -o../outputs/out2.n33 ../inputs/in.0] -F[error|err2.n33] -C[V2.n33]
+
+
+Test Case 34 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.1.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Ca -o../outputs/out2.n34 ../inputs/in.0] -F[error|err2.n34] -C[V2.n34]
+
+
+Test Case 35 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.1.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -Ce -o../outputs/out2.n35 ../inputs/in.0] -F[error|err2.n35] -C[V2.n35]
+
+
+Test Case 36 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.1.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dF -o../outputs/out2.n36 ../inputs/in.0] -F[error|err2.n36] -C[V2.n36]
+
+
+Test Case 37 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.2.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  Alternate fast
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -CF -o../outputs/out2.n37 ../inputs/in.0] -F[error|err2.n37] -C[V2.n37]
+
+
+Test Case 38 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Caem -o../outputs/out2.n38 ../inputs/in.0] -F[error|err2.n38] -C[V2.n38]
+
+
+Test Case 39 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Caem -o../outputs/out2.n39 ../inputs/in.0] -F[error|err2.n39] -C[V2.n39]
+
+
+Test Case 40 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cae -o../outputs/out2.n40 ../inputs/in.0] -F[error|err2.n40] -C[V2.n40]
+
+
+Test Case 41 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cae -o../outputs/out2.n41 ../inputs/in.0] -F[error|err2.n41] -C[V2.n41]
+
+
+Test Case 42 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cam -o../outputs/out2.n42 ../inputs/in.0] -F[error|err2.n42] -C[V2.n42]
+
+
+Test Case 43 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cam -o../outputs/out2.n43 ../inputs/in.0] -F[error|err2.n43] -C[V2.n43]
+
+
+Test Case 44 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Ca -o../outputs/out2.n44 ../inputs/in.0] -F[error|err2.n44] -C[V2.n44]
+
+
+Test Case 45 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Ca -o../outputs/out2.n45 ../inputs/in.0] -F[error|err2.n45] -C[V2.n45]
+
+
+Test Case 46 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cem -o../outputs/out2.n46 ../inputs/in.0] -F[error|err2.n46] -C[V2.n46]
+
+
+Test Case 47 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cem -o../outputs/out2.n47 ../inputs/in.0] -F[error|err2.n47] -C[V2.n47]
+
+
+Test Case 48 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Ce -o../outputs/out2.n48 ../inputs/in.0] -F[error|err2.n48] -C[V2.n48]
+
+
+Test Case 49 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Ce -o../outputs/out2.n49 ../inputs/in.0] -F[error|err2.n49] -C[V2.n49]
+
+
+Test Case 50 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -Cm -o../outputs/out2.n50 ../inputs/in.0] -F[error|err2.n50] -C[V2.n50]
+
+
+Test Case 51 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -Cm -o../outputs/out2.n51 ../inputs/in.0] -F[error|err2.n51] -C[V2.n51]
+
+
+Test Case 52 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -dl -o../outputs/out2.n52 ../inputs/in.0] -F[error|err2.n52] -C[V2.n52]
+
+
+Test Case 53 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.3.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_on
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -d -o../outputs/out2.n53 ../inputs/in.0] -F[error|err2.n53] -C[V2.n53]
+
+
+Test Case 54 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Crae -o../outputs/out2.n54 ../inputs/in.0] -F[error|err2.n54] -C[V2.n54]
+
+
+Test Case 55 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Cra -o../outputs/out2.n55 ../inputs/in.0] -F[error|err2.n55] -C[V2.n55]
+
+
+Test Case 56 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Cre -o../outputs/out2.n56 ../inputs/in.0] -F[error|err2.n56] -C[V2.n56]
+
+
+Test Case 57 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.1.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Cr -o../outputs/out2.n57 ../inputs/in.0] -F[error|err2.n57] -C[V2.n57]
+
+
+Test Case 58 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.1.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Crae -o../outputs/out2.n58 ../inputs/in.0] -F[error|err2.n58] -C[V2.n58]
+
+
+Test Case 59 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.1.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Cra -o../outputs/out2.n59 ../inputs/in.0] -F[error|err2.n59] -C[V2.n59]
+
+
+Test Case 60 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.1.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Cre -o../outputs/out2.n60 ../inputs/in.0] -F[error|err2.n60] -C[V2.n60]
+
+
+Test Case 61 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.1.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Cr -o../outputs/out2.n61 ../inputs/in.0] -F[error|err2.n61] -C[V2.n61]
+
+
+Test Case 62 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Craem -o../outputs/out2.n62 ../inputs/in.0] -F[error|err2.n62] -C[V2.n62]
+
+
+Test Case 63 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Craem -o../outputs/out2.n63 ../inputs/in.0] -F[error|err2.n63] -C[V2.n63]
+
+
+Test Case 64 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Crae -o../outputs/out2.n64 ../inputs/in.0] -F[error|err2.n64] -C[V2.n64]
+
+
+Test Case 65 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Crae -o../outputs/out2.n65 ../inputs/in.0] -F[error|err2.n65] -C[V2.n65]
+
+
+Test Case 66 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cram -o../outputs/out2.n66 ../inputs/in.0] -F[error|err2.n66] -C[V2.n66]
+
+
+Test Case 67 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cram -o../outputs/out2.n67 ../inputs/in.0] -F[error|err2.n67] -C[V2.n67]
+
+
+Test Case 68 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cra -o../outputs/out2.n68 ../inputs/in.0] -F[error|err2.n68] -C[V2.n68]
+
+
+Test Case 69 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cra -o../outputs/out2.n69 ../inputs/in.0] -F[error|err2.n69] -C[V2.n69]
+
+
+Test Case 70 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Crem -o../outputs/out2.n70 ../inputs/in.0] -F[error|err2.n70] -C[V2.n70]
+
+
+Test Case 71 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Crem -o../outputs/out2.n71 ../inputs/in.0] -F[error|err2.n71] -C[V2.n71]
+
+
+Test Case 72 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cre -o../outputs/out2.n72 ../inputs/in.0] -F[error|err2.n72] -C[V2.n72]
+
+
+Test Case 73 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cre -o../outputs/out2.n73 ../inputs/in.0] -F[error|err2.n73] -C[V2.n73]
+
+
+Test Case 74 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Crm -o../outputs/out2.n74 ../inputs/in.0] -F[error|err2.n74] -C[V2.n74]
+
+
+Test Case 75 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Crm -o../outputs/out2.n75 ../inputs/in.0] -F[error|err2.n75] -C[V2.n75]
+
+
+Test Case 76 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cr -o../outputs/out2.n76 ../inputs/in.0] -F[error|err2.n76] -C[V2.n76]
+
+
+Test Case 77 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.1.3.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_on
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cr -o../outputs/out2.n77 ../inputs/in.0] -F[error|err2.n77] -C[V2.n77]
+
+
+Test Case 78 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Cae -o../outputs/out2.n78 ../inputs/in.0] -F[error|err2.n78] -C[V2.n78]
+
+
+Test Case 79 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Ca -o../outputs/out2.n79 ../inputs/in.0] -F[error|err2.n79] -C[V2.n79]
+
+
+Test Case 80 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -Ce -o../outputs/out2.n80 ../inputs/in.0] -F[error|err2.n80] -C[V2.n80]
+
+
+Test Case 81 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.1.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FastScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -f -o../outputs/out2.n81 ../inputs/in.0] -F[error|err2.n81] -C[V2.n81]
+
+
+Test Case 82 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.2.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  FullScan
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cf -o../outputs/out2.n82 ../inputs/in.0] -F[error|err2.n82] -C[V2.n82]
+
+
+Test Case 83 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.1.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Cae -o../outputs/out2.n83 ../inputs/in.0] -F[error|err2.n83] -C[V2.n83]
+
+
+Test Case 84 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.1.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Ca -o../outputs/out2.n84 ../inputs/in.0] -F[error|err2.n84] -C[V2.n84]
+
+
+Test Case 85 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.1.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -Ce -o../outputs/out2.n85 ../inputs/in.0] -F[error|err2.n85] -C[V2.n85]
+
+
+Test Case 86 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.1.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  FastScanTable
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -F -o../outputs/out2.n86 ../inputs/in.0] -F[error|err2.n86] -C[V2.n86]
+
+
+Test Case 87 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.2.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  Alternate fast
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -CF -o../outputs/out2.n87 ../inputs/in.0] -F[error|err2.n87] -C[V2.n87]
+
+
+Test Case 88 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Caem -o../outputs/out2.n88 ../inputs/in.0] -F[error|err2.n88] -C[V2.n88]
+
+
+Test Case 89 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Caem -o../outputs/out2.n89 ../inputs/in.0] -F[error|err2.n89] -C[V2.n89]
+
+
+Test Case 90 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cae -o../outputs/out2.n90 ../inputs/in.0] -F[error|err2.n90] -C[V2.n90]
+
+
+Test Case 91 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cae -o../outputs/out2.n91 ../inputs/in.0] -F[error|err2.n91] -C[V2.n91]
+
+
+Test Case 92 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cam -o../outputs/out2.n92 ../inputs/in.0] -F[error|err2.n92] -C[V2.n92]
+
+
+Test Case 93 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cam -o../outputs/out2.n93 ../inputs/in.0] -F[error|err2.n93] -C[V2.n93]
+
+
+Test Case 94 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Ca -o../outputs/out2.n94 ../inputs/in.0] -F[error|err2.n94] -C[V2.n94]
+
+
+Test Case 95 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.1.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  Align
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Ca -o../outputs/out2.n95 ../inputs/in.0] -F[error|err2.n95] -C[V2.n95]
+
+
+Test Case 96 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.1.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cem -o../outputs/out2.n96 ../inputs/in.0] -F[error|err2.n96] -C[V2.n96]
+
+
+Test Case 97 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.1.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cem -o../outputs/out2.n97 ../inputs/in.0] -F[error|err2.n97] -C[V2.n97]
+
+
+Test Case 98 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.1.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Ce -o../outputs/out2.n98 ../inputs/in.0] -F[error|err2.n98] -C[V2.n98]
+
+
+Test Case 99 		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.1.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  EquiClass
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Ce -o../outputs/out2.n99 ../inputs/in.0] -F[error|err2.n99] -C[V2.n99]
+
+
+Test Case 100		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.2.1.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -Cm -o../outputs/out2.n100 ../inputs/in.0] -F[error|err2.n100] -C[V2.n100]
+
+
+Test Case 101		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.2.1.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  on
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -Cm -o../outputs/out2.n101 ../inputs/in.0] -F[error|err2.n101] -C[V2.n101]
+
+
+Test Case 102		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.2.2.1.1.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  on
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -l -o../outputs/out2.n102 ../inputs/in.0] -F[error|err2.n102] -C[V2.n102]
+
+
+Test Case 103		(Key = 1.1.1.1.1.1.1.1.1.1.1.1.1.1.2.2.3.3.2.2.2.1.2.1.1.1.1.1.1.)
+   Input file name             :  good file name
+   Backing up                  :  Backup_off
+   Help                        :  Help_off
+   Case-insensitive            :  CaseInsen_off
+   Default rule                :  DefaultRule_off
+   Standard output             :  Stdout_off
+   Statistics                  :  Statistics_off
+   Warning message             :  Warn_off
+   Batch scanner               :  Batch_off
+   line directives             :  line_off
+   Trace mode                  :  Trace_off
+   Print version number        :  Version_off
+   7-bit scanner               :  7bit_off
+   Prefix                      :  Prefix_off
+   Debug mode                  :  Debug_off
+   Bypass use                  :  Bypass_off
+   Fast scanner                :  off
+   Fast scanner with table     :  off
+   Align                       :  off
+   Equivalence classes         :  off
+   Meta-equivalence classes    :  off
+   8-bit scanner               :  off
+   Compatibility with AT&T lex :  off
+   Output file                 :  on
+   Performance report          :  off
+   Format of input file        :  General
+   Definitions                 :  Match
+   Rules                       :  Match
+   Patterns                    :  All
+UniverseLine: -P[error -o../outputs/out2.n103 ../inputs/in.0] -F[error|err2.n103] -C[V2.n103]
+

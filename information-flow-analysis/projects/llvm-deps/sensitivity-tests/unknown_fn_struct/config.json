@@ -1,0 +1,44 @@
+{
+  "signature_mode": {
+    "direction": 3,
+    "pointer": 0,
+    "custom": []
+  },
+  "lattice": {
+    "levels": [
+      {
+        "name": "secret",
+        "level": ["public", "private"]
+      }
+    ],
+    "compartments": []
+  },
+  "source": [
+    {
+      "type": "variable",
+      "function": "defined_function",
+      "name": "k",
+      "index": 0,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    }
+  ],
+  "sink": [],
+  "using_whitelist": true,
+  "whitelist": [],
+  "ptr_whitelist": [
+    {
+      "type": "variable",
+      "function": "defined_function",
+      "name": "k",
+      "index": 0,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    }
+  ],
+  "entry": ["defined_function", "defined_function_2", "defined_function_3"]
+}

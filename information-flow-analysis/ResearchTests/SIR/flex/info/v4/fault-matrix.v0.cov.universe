@@ -1,0 +1,1430 @@
+	16 listversions
+	42 listtests
+-P[error ../inputs/in.n2] -F[lex.yy.c|out0.526]  -F[error|err0.526] -C[V0.526]
+-P[error ../inputs/in.n3] -F[lex.yy.c|out0.527]  -F[error|err0.527] -C[V0.527]
+-P[error ../inputs/in.n4] -F[lex.yy.c|out0.528]  -F[error|err0.528] -C[V0.528]
+-P[error ../inputs/in.n8] -F[lex.yy.c|out0.529]  -F[error|err0.529] -C[V0.529]
+-P[error -T -7 ../inputs/in.n10] -F[lex.yy.c|out0.530]  -F[error|err0.530] -C[V0.530]
+-P[error -T -8 ../inputs/in.n10] -F[lex.yy.c|out0.531]  -F[error|err0.531] -C[V0.531]
+-P[error -T ../inputs/in.n11] -F[lex.yy.c|out0.532]  -F[error|err0.532] -C[V0.532]
+-P[error -S../inputs/skel ../inputs/in.0] -F[lex.yy.c|out0.533]  -F[error|err0.533] -F[skel|skel0.1] -C[V0.533]
+-P[error -T ../inputs/in.n12] -F[lex.yy.c|out0.534]  -F[error|err0.534] -C[V0.534]
+-P[error -fl ../inputs/in.0] -F[lex.yy.c|out0.535]  -F[error|err0.535] -C[V0.535]
+-P[error -Cfm ../inputs/in.0] -F[lex.yy.c|out0.536]  -F[error|err0.536] -C[V0.536]
+-P[error -I -Cf ../inputs/in.0] -F[lex.yy.c|out0.537]  -F[error|err0.537] -C[V0.537]
+-P[error -CfF ../inputs/in.0] -F[lex.yy.c|out0.538]  -F[error|err0.538] -C[V0.538]
+-P[error -S ../inputs/in.0] -F[lex.yy.c|out0.539]  -F[error|err0.539] -C[V0.539]
+-P[error -T -Pyy ../inputs/in.yyac] -F[lex.yy.c|out0.540]  -F[error|err0.540] -C[V0.540]
+-P[error -c ../inputs/in.yyac] -F[lex.yy.c|out0.541]  -F[error|err0.541] -C[V0.541]
+-P[error -n ../inputs/in.yyac] -F[lex.yy.c|out0.542]  -F[error|err0.542] -C[V0.542]
+-P[error -fC ../inputs/in.yyac] -F[lex.yy.c|out0.543]  -F[error|err0.543] -C[V0.543]
+-P[error -C -C ../inputs/in.yyac] -F[lex.yy.c|out0.544]  -F[error|err0.544] -C[V0.544]
+-P[error -T -p ../inputs/in.reject] -F[lex.yy.c|out0.545] -F[error|err0.545] -C[V0.545]
+-P[error -T -pp ../inputs/in.n2] -F[lex.yy.c|out0.546] -F[error|err0.546] -C[V0.546]
+-P[error -T -pI ../inputs/in.n4] -F[lex.yy.c|out0.547] -F[error|err0.547] -C[V0.547]
+-P[error -T -p ../inputs/in.n8] -F[lex.yy.c|out0.548] -F[error|err0.548] -C[V0.548]
+-P[error -T -p ../inputs/in.n11] -F[lex.yy.c|out0.549] -F[error|err0.549] -C[V0.549]
+-P[error -T -p -Cf ../inputs/in.reject] -F[lex.yy.c|out0.550] -F[error|err0.550] -C[V0.550]
+-P[error -T -p -CF ../inputs/in.reject] -F[lex.yy.c|out0.551] -F[error|err0.551] -C[V0.551]
+-P[error -T -p -Cv ../inputs/in.0] -F[lex.yy.c|out0.552] -F[error|err0.552] -C[V0.552]
+-P[error -T -fPpre ../inputs/in.0] -F[lex.yy.c|out0.553] -F[error|err0.553] -C[V0.553]
+-P[error -T -fS../inputs/skel ../inputs/in.0] -F[lex.yy.c|out0.554]  -F[error|err0.554] -F[skel|skel0.2] -C[V0.554]
+-P[error -T -vb ../inputs/in.0] -F[lex.yy.c|out0.555]  -F[lex.backup|backup.2]-F[error|err0.555] -C[V0.555]
+-P[error -T -vbdilpstwBLT7 ../inputs/in.0] -F[lex.yy.c|out0.556] -F[lex.backup|backup.3] -F[error|err0.556] -C[V0.556]
+-P[error -T -vbdilpstwILT8 ../inputs/in.0] -F[lex.yy.c|out0.557]  -F[lex.backup|backup.4]-F[error|err0.557] -C[V0.557]
+-P[error -T -v -Cafemr ../inputs/in.0] -F[lex.yy.c|out0.558] -F[error|err0.558] -C[V0.558]
+-P[error -v -CaFemr ../inputs/in.0] -F[lex.yy.c|out0.559] -F[error|err0.559] -C[V0.559]
+-P[error -v -Ca ../inputs/in.0] -F[lex.yy.c|out0.560] -F[error|err0.560] -C[V0.560]
+-P[error -v -S../inputs/skel ../inputs/in.0] -F[lex.yy.c|out0.561]  -F[error|err0.561] -F[skel|skel0.3] -C[V0.561]
+-P[error -v -Pyy ../inputs/in.yyac] -F[lex.yy.c|out0.562]  -F[error|err0.562] -C[V0.562]
+-P[error ../inputs/in.0 ../inputs/in.yyac] -F[lex.yy.c|out0.563]  -F[error|err0.563] -C[V0.563]
+-P[error -T -Cfe ../inputs/in.yyless] -F[lex.yy.c|out0.564]  -F[error|err0.564] -C[V0.564]
+-P[error -T ../inputs/in.n14] -F[lex.yy.c|out0.565]  -F[error|err0.565] -C[V0.565]
+-P[error ../inputs/in.nhex] -F[lex.yy.c|out0.566]  -F[error|err0.566] -C[V0.566]
+-P[error ../inputs/in.neof] -F[lex.yy.c|out0.567]  -F[error|err0.567] -C[V0.567]
+unitest0:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest1:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest2:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	1
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	1
+v16:
+	1
+unitest3:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest4:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest5:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest6:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	1
+v15:
+	0
+v16:
+	1
+unitest7:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest8:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	1
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	1
+v15:
+	1
+v16:
+	1
+unitest9:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest10:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest11:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest12:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest13:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest14:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest15:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest16:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest17:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest18:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest19:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	1
+v15:
+	0
+v16:
+	1
+unitest20:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest21:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	1
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	1
+v16:
+	1
+unitest22:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest23:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	1
+v15:
+	0
+v16:
+	1
+unitest24:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest25:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest26:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest27:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest28:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest29:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest30:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	1
+v6:
+	0
+v7:
+	1
+v8:
+	1
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	1
+v14:
+	1
+v15:
+	1
+v16:
+	1
+unitest31:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	1
+v6:
+	0
+v7:
+	1
+v8:
+	1
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	1
+v14:
+	1
+v15:
+	1
+v16:
+	1
+unitest32:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest33:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	0
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	0
+unitest34:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest35:
+v1:
+	0
+v2:
+	0
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest36:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest37:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest38:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	0
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest39:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest40:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1
+unitest41:
+v1:
+	1
+v2:
+	1
+v3:
+	0
+v4:
+	0
+v5:
+	0
+v6:
+	1
+v7:
+	0
+v8:
+	0
+v9:
+	0
+v10:
+	0
+v11:
+	0
+v12:
+	1
+v13:
+	0
+v14:
+	0
+v15:
+	0
+v16:
+	1

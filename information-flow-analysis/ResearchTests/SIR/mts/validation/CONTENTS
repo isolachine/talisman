@@ -1,0 +1,12 @@
+Contents of mts/validation:
+
+validate-c.sh - Script used to validate MakeTestScript against 'mts'.
+
+validate-java.sh - Script used to validate MakeTestScript against 'javamts'.
+
+c-mts-validate-report.txt - Validation report for C subjects.
+
+java-mts-validate-report.txt - Validation report for Java subjects.
+
+javamts - Minor variant of wrapper script used by validation scripts for
+    convenience.

@@ -1,0 +1,336 @@
+if /bin/sh ./support/mkversion.sh -b -s release -d 2.02 -p 0 -o newversion.h; \
+then mv newversion.h version.h; fi;
+
+	  ***********************************************************
+	  *                                                         *
+	  * Making Bash-2.02.0-release for a sparc running solaris2.8
+	  *                                                         *
+	  ***********************************************************
+
+rm -f shell.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c shell.c
+rm -f eval.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c eval.c
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/builtins'
+gcc  -g -O2 -o mkbuiltins mkbuiltins.o -lsocket -lnsl -ldl  
+./mkbuiltins -externfile builtext.h -structfile builtins.c \
+    -noproduction -D . ./alias.def ./bind.def ./break.def ./builtin.def ./cd.def ./colon.def ./command.def ./declare.def ./echo.def ./enable.def ./eval.def ./getopts.def ./exec.def ./exit.def ./fc.def ./fg_bg.def ./hash.def ./help.def ./history.def ./jobs.def ./kill.def ./let.def ./read.def ./return.def ./set.def ./setattr.def ./shift.def ./source.def ./suspend.def ./test.def ./times.def ./trap.def ./type.def ./ulimit.def ./umask.def ./wait.def ./reserved.def ./pushd.def ./shopt.def ./printf.def
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/builtins'
+rm -f y.tab.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c y.tab.c
+rm -f general.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c general.c
+rm -f make_cmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c make_cmd.c
+rm -f print_cmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c print_cmd.c
+rm -f dispose_cmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c dispose_cmd.c
+rm -f execute_cmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c execute_cmd.c
+rm -f variables.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c variables.c
+rm -f copy_cmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c copy_cmd.c
+rm -f error.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c error.c
+rm -f expr.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c expr.c
+rm -f flags.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c flags.c
+rm -f jobs.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c jobs.c
+rm -f subst.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c subst.c
+rm -f hashcmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c hashcmd.c
+rm -f hashlib.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c hashlib.c
+rm -f mailcheck.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c mailcheck.c
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -o mksignames ./support/mksignames.c
+rm -f lsignames.h
+./mksignames lsignames.h
+if cmp -s lsignames.h signames.h ; then :; else rm -f signames.h ; cp lsignames.h signames.h ; fi
+rm -f trap.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c trap.c
+rm -f input.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c input.c
+rm -f unwind_prot.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c unwind_prot.c
+rm -f pathexp.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c pathexp.c
+rm -f sig.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c sig.c
+rm -f test.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c test.c
+rm -f version.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c version.c
+rm -f alias.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c alias.c
+rm -f array.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c array.c
+rm -f braces.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c braces.c
+rm -f bracecomp.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c bracecomp.c
+rm -f bashhist.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c bashhist.c
+rm -f bashline.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c bashline.c
+rm -f siglist.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c siglist.c
+rm -f list.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c list.c
+rm -f stringlib.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c stringlib.c
+rm -f locale.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c locale.c
+rm -f findcmd.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c findcmd.c
+rm -f redir.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c redir.c
+rm -f xmalloc.o
+gcc  -DPROGRAM='"bash"' -DHOSTTYPE='"sparc"' -DOSTYPE='"solaris2.8"' -DMACHTYPE='"sparc-sun-solaris2.8"' -DSHELL -DHAVE_CONFIG_H  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I. -I./lib -g -O2 -c xmalloc.c
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/builtins'
+rm -f builtins.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 builtins.c
+rm -f alias.o
+./mkbuiltins -D . alias.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 alias.c || ( rm -f alias.c ; exit 1 )
+rm -f alias.c
+rm -f bind.o
+./mkbuiltins -D . bind.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 bind.c || ( rm -f bind.c ; exit 1 )
+rm -f bind.c
+rm -f break.o
+./mkbuiltins -D . break.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 break.c || ( rm -f break.c ; exit 1 )
+rm -f break.c
+rm -f builtin.o
+./mkbuiltins -D . builtin.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 builtin.c || ( rm -f builtin.c ; exit 1 )
+rm -f builtin.c
+rm -f cd.o
+./mkbuiltins -D . cd.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 cd.c || ( rm -f cd.c ; exit 1 )
+rm -f cd.c
+rm -f colon.o
+./mkbuiltins -D . colon.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 colon.c || ( rm -f colon.c ; exit 1 )
+rm -f colon.c
+rm -f command.o
+./mkbuiltins -D . command.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 command.c || ( rm -f command.c ; exit 1 )
+rm -f command.c
+rm -f common.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 common.c
+rm -f declare.o
+./mkbuiltins -D . declare.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 declare.c || ( rm -f declare.c ; exit 1 )
+rm -f declare.c
+rm -f echo.o
+./mkbuiltins -D . echo.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 echo.c || ( rm -f echo.c ; exit 1 )
+rm -f echo.c
+rm -f enable.o
+./mkbuiltins -D . enable.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 enable.c || ( rm -f enable.c ; exit 1 )
+rm -f enable.c
+rm -f eval.o
+./mkbuiltins -D . eval.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 eval.c || ( rm -f eval.c ; exit 1 )
+rm -f eval.c
+rm -f evalfile.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 evalfile.c
+rm -f evalstring.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 evalstring.c
+rm -f exec.o
+./mkbuiltins -D . exec.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 exec.c || ( rm -f exec.c ; exit 1 )
+rm -f exec.c
+rm -f exit.o
+./mkbuiltins -D . exit.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 exit.c || ( rm -f exit.c ; exit 1 )
+rm -f exit.c
+rm -f fc.o
+./mkbuiltins -D . fc.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 fc.c || ( rm -f fc.c ; exit 1 )
+rm -f fc.c
+rm -f fg_bg.o
+./mkbuiltins -D . fg_bg.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 fg_bg.c || ( rm -f fg_bg.c ; exit 1 )
+rm -f fg_bg.c
+rm -f hash.o
+./mkbuiltins -D . hash.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 hash.c || ( rm -f hash.c ; exit 1 )
+rm -f hash.c
+rm -f help.o
+./mkbuiltins -D . help.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 help.c || ( rm -f help.c ; exit 1 )
+rm -f help.c
+rm -f history.o
+./mkbuiltins -D . history.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 history.c || ( rm -f history.c ; exit 1 )
+rm -f history.c
+rm -f jobs.o
+./mkbuiltins -D . jobs.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 jobs.c || ( rm -f jobs.c ; exit 1 )
+rm -f jobs.c
+rm -f kill.o
+./mkbuiltins -D . kill.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 kill.c || ( rm -f kill.c ; exit 1 )
+rm -f kill.c
+rm -f let.o
+./mkbuiltins -D . let.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 let.c || ( rm -f let.c ; exit 1 )
+rm -f let.c
+rm -f pushd.o
+./mkbuiltins -D . pushd.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 pushd.c || ( rm -f pushd.c ; exit 1 )
+rm -f pushd.c
+rm -f read.o
+./mkbuiltins -D . read.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 read.c || ( rm -f read.c ; exit 1 )
+rm -f read.c
+rm -f return.o
+./mkbuiltins -D . return.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 return.c || ( rm -f return.c ; exit 1 )
+rm -f return.c
+rm -f set.o
+./mkbuiltins -D . set.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 set.c || ( rm -f set.c ; exit 1 )
+rm -f set.c
+rm -f setattr.o
+./mkbuiltins -D . setattr.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 setattr.c || ( rm -f setattr.c ; exit 1 )
+rm -f setattr.c
+rm -f shift.o
+./mkbuiltins -D . shift.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 shift.c || ( rm -f shift.c ; exit 1 )
+rm -f shift.c
+rm -f source.o
+./mkbuiltins -D . source.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 source.c || ( rm -f source.c ; exit 1 )
+rm -f source.c
+rm -f suspend.o
+./mkbuiltins -D . suspend.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 suspend.c || ( rm -f suspend.c ; exit 1 )
+rm -f suspend.c
+rm -f test.o
+./mkbuiltins -D . test.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 test.c || ( rm -f test.c ; exit 1 )
+rm -f test.c
+rm -f times.o
+./mkbuiltins -D . times.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 times.c || ( rm -f times.c ; exit 1 )
+rm -f times.c
+rm -f trap.o
+./mkbuiltins -D . trap.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 trap.c || ( rm -f trap.c ; exit 1 )
+rm -f trap.c
+rm -f type.o
+./mkbuiltins -D . type.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 type.c || ( rm -f type.c ; exit 1 )
+rm -f type.c
+gcc  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 -o psize.aux ./psize.c
+/bin/sh ./psize.sh > pipesize.h
+rm -f ulimit.o
+./mkbuiltins -D . ulimit.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 ulimit.c || ( rm -f ulimit.c ; exit 1 )
+rm -f ulimit.c
+rm -f umask.o
+./mkbuiltins -D . umask.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 umask.c || ( rm -f umask.c ; exit 1 )
+rm -f umask.c
+rm -f wait.o
+./mkbuiltins -D . wait.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 wait.c || ( rm -f wait.c ; exit 1 )
+rm -f wait.c
+rm -f getopts.o
+./mkbuiltins -D . getopts.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 getopts.c || ( rm -f getopts.c ; exit 1 )
+rm -f getopts.c
+rm -f shopt.o
+./mkbuiltins -D . shopt.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 shopt.c || ( rm -f shopt.c ; exit 1 )
+rm -f shopt.c
+rm -f printf.o
+./mkbuiltins -D . printf.def
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 printf.c || ( rm -f printf.c ; exit 1 )
+rm -f printf.c
+rm -f getopt.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 getopt.c
+rm -f bashgetopt.o
+gcc -c  -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I.. -I.. -I../lib -I.  -g -O2 bashgetopt.c
+rm -f libbuiltins.a
+ar cr libbuiltins.a builtins.o alias.o bind.o break.o builtin.o cd.o colon.o command.o common.o declare.o echo.o enable.o eval.o evalfile.o evalstring.o exec.o exit.o fc.o fg_bg.o hash.o help.o history.o jobs.o kill.o let.o pushd.o read.o return.o set.o setattr.o shift.o source.o suspend.o test.o times.o trap.o type.o ulimit.o umask.o wait.o getopts.o shopt.o printf.o getopt.o bashgetopt.o 
+ranlib libbuiltins.a
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/builtins'
+making lib/readline/libreadline.a in ./lib/readline
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/lib/readline'
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 readline.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 vi_mode.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 funmap.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 keymaps.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 parens.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 search.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 rltty.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 complete.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 bind.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 isearch.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 display.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 signals.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 util.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 kill.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 undo.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 macro.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 input.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 callback.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 terminal.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 nls.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 history.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 histexpand.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 histfile.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 histsearch.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 shell.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 tilde.c
+gcc -c -DHAVE_CONFIG_H -DSHELL  -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I/home/satya/subjects/bash/sources.satya/v3 -I../.. -I../../lib  -g -O2 xmalloc.c
+rm -f libreadline.a
+ar cr libreadline.a readline.o vi_mode.o funmap.o keymaps.o parens.o search.o rltty.o complete.o bind.o isearch.o display.o signals.o util.o kill.o undo.o macro.o input.o callback.o terminal.o nls.o history.o histexpand.o histfile.o histsearch.o shell.o tilde.o xmalloc.o
+test -n "ranlib" && ranlib libreadline.a
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/lib/readline'
+making lib/glob/libglob.a in ./lib/glob
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/lib/glob'
+gcc -c -DHAVE_CONFIG_H -DSHELL -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I../.. -I../.. -I../../lib  -g -O2 glob.c
+gcc -c -DHAVE_CONFIG_H -DSHELL -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I../.. -I../.. -I../../lib  -g -O2 fnmatch.c
+rm -f libglob.a
+ar cr libglob.a glob.o fnmatch.o
+test -n "ranlib" && ranlib libglob.a
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/lib/glob'
+making lib/readline/libhistory.a in ./lib/readline
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/lib/readline'
+rm -f libhistory.a
+ar cr libhistory.a history.o histexpand.o histfile.o histsearch.o shell.o xmalloc.o
+test -n "ranlib" && ranlib libhistory.a
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/lib/readline'
+making lib/tilde/libtilde.a in ./lib/tilde
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/lib/tilde'
+gcc -c -DHAVE_CONFIG_H -DSHELL -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -I. -I../.. -I../.. -I../../lib  -g -O2 tilde.c
+rm -f libtilde.a
+ar cr libtilde.a tilde.o
+test -n "ranlib" && ranlib libtilde.a
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/lib/tilde'
+make[1]: Entering directory `/home/satya/subjects/bash/sources.satya/v3/lib/malloc'
+gcc  -I. -I../.. -I../.. -I../../lib -DHAVE_CONFIG_H -DSHELL  -g -O2 -DRCHECK -Dbotch=programming_error -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -c malloc.c
+gcc  -I. -I../.. -I../.. -I../../lib -DHAVE_CONFIG_H -DSHELL  -g -O2 -DRCHECK -Dbotch=programming_error -D_LARGEFILE_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -c stub.c
+rm -f libmalloc.a
+ar cr libmalloc.a malloc.o  stub.o
+test -n "ranlib" && ranlib libmalloc.a
+make[1]: Leaving directory `/home/satya/subjects/bash/sources.satya/v3/lib/malloc'
+rm -f bash
+gcc -L./builtins -L./lib/readline -L./lib/readline -L./lib/tilde -L./lib/glob -L./lib/malloc -L./lib/sh   -g -O2 -o bash shell.o eval.o y.tab.o general.o make_cmd.o print_cmd.o  dispose_cmd.o execute_cmd.o variables.o copy_cmd.o error.o expr.o flags.o jobs.o subst.o hashcmd.o hashlib.o mailcheck.o trap.o input.o unwind_prot.o pathexp.o sig.o test.o version.o alias.o array.o braces.o bracecomp.o bashhist.o bashline.o siglist.o list.o stringlib.o locale.o findcmd.o redir.o xmalloc.o -lbuiltins -lreadline -lhistory -ltermcap -lglob -ltilde -lmalloc -lsh   -lsocket -lnsl -ldl  
+ls -l bash
+-rwxr-xr-x   1 satya    other     3362788 Jul 26 00:14 bash
+size bash
+466771 + 22248 + 7636 = 496655

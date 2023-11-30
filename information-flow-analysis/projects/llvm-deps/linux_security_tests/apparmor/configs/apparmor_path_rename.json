@@ -1,0 +1,223 @@
+{
+  "signature_mode": {
+    "direction": 1,
+    "pointer": 0,
+    "custom": []
+  },
+  "lattice": {
+    "levels": [
+      {
+        "name": "source",
+        "level": ["mediator", "input", "external"]
+      },
+      {
+        "name": "value",
+        "level": ["static", "k-static", "dynamic"]
+      }
+    ],
+    "compartments": [
+      {
+        "name": "purpose",
+        "set": ["subject", "object", "operation", "policy"]
+      }
+    ]
+  },
+  "source": [
+    {
+      "type": "constant",
+      "name": "MAY_READ",
+      "file": "security/apparmor/lsm.c",
+      "line": 335,
+      "value": 4,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "MAY_WRITE",
+      "file": "security/apparmor/lsm.c",
+      "line": 335,
+      "value": 2,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "MAY_WRITE",
+      "file": "security/apparmor/lsm.c",
+      "line": 340,
+      "value": 2,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "MS_NOUSER",
+      "file": "security/apparmor/include/apparmor.h",
+      "line": 117,
+      "value": -2147483648,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "function": "apparmor_path_rename",
+      "type": "variable",
+      "name": "old_dir",
+      "index": -1,
+      "l": {
+        "source": "input",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "apparmor_path_rename",
+      "type": "variable",
+      "name": "old_dentry",
+      "index": -1,
+      "l": {
+        "source": "input",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "apparmor_path_rename",
+      "type": "variable",
+      "name": "new_dir",
+      "index": -1,
+      "l": {
+        "source": "input",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "apparmor_path_rename",
+      "type": "variable",
+      "name": "new_dentry",
+      "index": -1,
+      "l": {
+        "source": "input",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "apparmor_path_rename",
+      "type": "variable",
+      "name": "profile",
+      "index": -1,
+      "l": {
+        "source": "mediator",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["subject"] }
+    },
+    {
+      "type": "variable",
+      "name": "current_task",
+      "index": -1,
+      "l": {
+        "source": "external",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["subject"] }
+    }
+  ],
+  "sink": [
+    {
+      "function": "aa_path_perm",
+      "type": "argument",
+      "number": 0,
+      "index": -1,
+      "l": {
+        "source": "mediator",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "function": "aa_path_perm",
+      "type": "argument",
+      "number": 1,
+      "index": -1,
+      "l": {
+        "source": "mediator",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["subject"] }
+    },
+    {
+      "function": "aa_path_perm",
+      "type": "argument",
+      "number": 2,
+      "index": -1,
+      "l": {
+        "source": "mediator",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "aa_path_perm",
+      "type": "argument",
+      "number": 5,
+      "index": -1,
+      "l": {
+        "source": "mediator",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "aa_path_perm",
+      "type": "argument",
+      "number": 4,
+      "index": -1,
+      "l": {
+        "source": "mediator",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    }
+  ],
+  "using_constant": true,
+  "using_whitelist": true,
+  "whitelist": [],
+  "implicit_whitelist": [
+    { "file": "security/apparmor/lsm.c", "line": 100 },
+    { "file": "security/apparmor/lsm.c", "line": 109 },
+    { "file": "security/apparmor/lsm.c", "line": 145 },
+    { "file": "security/apparmor/lsm.c", "line": 229 },
+    { "file": "security/apparmor/lsm.c", "line": 253 },
+    { "file": "security/apparmor/lsm.c", "line": 288 },
+    { "file": "security/apparmor/lsm.c", "line": 327 },
+    { "file": "security/apparmor/lsm.c", "line": 396 },
+    { "file": "security/apparmor/lsm.c", "line": 434 },
+    { "file": "security/apparmor/lsm.c", "line": 435 },
+    { "file": "security/apparmor/lsm.c", "line": 447 },
+    { "file": "security/apparmor/lsm.c", "line": 448 },
+    { "file": "security/apparmor/lsm.c", "line": 474 },
+    { "file": "security/apparmor/lsm.c", "line": 308 },
+    { "file": "security/apparmor/lsm.c", "line": 323 },
+    { "file": "security/apparmor/lsm.c", "line": 349 },
+    { "file": "security/apparmor/lsm.c", "line": 361 },
+    { "file": "security/apparmor/lsm.c", "line": 369 },
+    { "file": "security/apparmor/lsm.c", "line": 382 },
+    { "file": "security/apparmor/lsm.c", "line": 435 }
+  ],
+  "entry": ["apparmor_path_rename"]
+}

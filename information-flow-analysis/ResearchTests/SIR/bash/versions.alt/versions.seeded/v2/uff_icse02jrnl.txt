@@ -1,0 +1,25 @@
+waitchld--./jobs.c	FAULTY_F_KP_1
+assign_array_from_string--./variables.c	FAULTY_F_SPK_1
+set_default_locale--./locale.c	FAULTY_F_KP_7
+history_do_write--./lib/readline/histfile.c	FAULTY_F_SK_10
+polite_directory_format--./general.c	FAULTY_F_KP_10
+verify_substring_values--./subst.c	FAULTY_F_SK_2
+expand_word_internal--./subst.c	FAULTY_F_SPK_3
+add_mail_file--./mailcheck.c	FAULTY_F_SK_7
+decode_signal--./trap.c	FAULTY_F_KP_2
+polite_directory_format--./general.c	FAULTY_F_KP_10
+decode_signal--./trap.c	FAULTY_F_KP_2
+history_truncate_file--./lib/readline/histfile.c	FAULTY_F_KP_3
+select_query--./execute_cmd.c	FAULTY_F_KP_5
+decode_prompt_string--./y.tab.c	FAULTY_F_KP_6
+parameter_brace_substring--./subst.c	FAULTY_F_SK_4
+FAULTY_F_SPK_1
+FAULTY_F_SK_8
+FAULTY_F_KP_8
+FAULTY_F_KP_9
+FAULTY_F_SK_1
+FAULTY_F_SK_3
+FAULTY_F_SK_9
+FAULTY_F_SPK_2
+FAULTY_F_SPK_3
+FAULTY_F_SPK_5

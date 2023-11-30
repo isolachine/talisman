@@ -1,0 +1,9 @@
+set_pipestatus_array--./variables.c	FAULTY_F_KP_1	1
+parse_and_execute--./builtins/evalstring.c	FAULTY_F_KP_10	2
+full_pathname--./general.c	FAULTY_F_KP_3	3
+put_command_name_into_env--./variables.c	FAULTY_F_KP_9	4
+make_command_string_internal--./print_cmd.c	FAULTY_F_SK_1	5
+decode_prompt_string--./y.tab.c	FAULTY_F_SK_5	6
+pat_subst--./subst.c	FAULTY_F_SK_6	7
+glob_expand_word_list--./subst.c	FAULTY_F_SPK_1	8
+update_export_env_inplace--./variables.c	FAULTY_F_SPK_4	9

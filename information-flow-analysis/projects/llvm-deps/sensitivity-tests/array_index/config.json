@@ -1,0 +1,92 @@
+{
+  "signature_mode": {
+    "direction": 3,
+    "pointer": 0,
+    "custom": []
+  },
+  "lattice": {
+    "levels": [
+      {
+        "name": "secret",
+        "level": ["public", "private"]
+      }
+    ],
+    "compartments": []
+  },
+  "source": [
+    {
+      "type": "variable",
+      "name": "SP8",
+      "index": -1,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    },
+    {
+      "function": "foo",
+      "type": "variable",
+      "name": "sec",
+      "index": -1,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    },
+    {
+      "function": "foo",
+      "type": "variable",
+      "name": "expo",
+      "index": 4,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    },
+    {
+      "function": "foo",
+      "type": "variable",
+      "name": "ptr",
+      "index": -1,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    }
+  ],
+  "sink": [],
+  "using_whitelist": true,
+  "whitelist": [],
+  "ptr_whitelist": [
+    {
+      "type": "variable",
+      "name": "SP8",
+      "index": -1,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    },
+    {
+      "function": "foo",
+      "type": "variable",
+      "name": "expo",
+      "index": 4,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    },
+    {
+      "function": "foo",
+      "type": "variable",
+      "name": "ptr",
+      "index": -1,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    }
+  ],
+  "entry": ["foo"]
+}

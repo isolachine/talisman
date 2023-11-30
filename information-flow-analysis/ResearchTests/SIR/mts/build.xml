@@ -1,0 +1,66 @@
+<project name="mts" default="build" basedir=".">
+    <description>
+        Replacement Java implementation of mts/javamts
+    </description>
+
+    <property name="src" value="src"/>
+    <property name="build" value="classes"/>
+    <property name="bin" value="bin"/>
+    <property name="lib" value="lib"/>
+    <property name="doc" value="doc"/>
+    <property name="apidoc" value="${doc}/api"/>
+
+    <target name="init">
+      <tstamp/>
+      <mkdir dir="${build}"/>
+    </target>
+
+
+    <target name="compile" depends="init"
+      description="Compile the MakeTestScript source code">
+      <javac srcdir="${src}"
+             destdir="${build}"
+             includes="**/*.java"
+             source="1.4"
+             debug="true"
+             classpath="${lib}/antlr-2.7.6.jar"/>
+    </target>
+
+
+    <target name="build" depends="compile"
+      description="Build the MakeTestScript tool and documentation">
+
+       <jar jarfile="${bin}/mts.jar"
+            basedir="${build}"
+       />
+
+      <delete dir="${build}" includeemptydirs="true"/>
+
+      <antcall target="build-docs"/>
+    </target>
+
+
+    <target name="build-docs"
+      description="Build the MakeTestScript documentation">
+
+      <javadoc destdir="${apidoc}"
+               author="true"
+               version="true"
+               windowtitle="MakeTestScript API Documentation"
+               source="1.4"
+               classpath="${lib}/antlr-2.7.6.jar">
+
+        <packageset dir="${src}" defaultexcludes="yes">
+          <include name="sir/mts/**"/>
+          <include name="sir/mts/parser/**"/>
+          <include name="sir/mts/generators/**"/>
+        </packageset>
+      </javadoc>
+    </target>
+
+
+    <target name="clean"
+      description="Clean up MakeTestScript build artifacts">
+      <delete dir="${build}" includeemptydirs="true"/>
+    </target>
+</project>

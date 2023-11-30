@@ -1,0 +1,101 @@
+This directory contains:
+
+A. An instrumentation framework (based on LLVM) that allows logging program
+execution at different levels of granularity (e.g., statements, basic blocks).
+
+B. A collection of test suites from the Siemens benchmark.
+
+C. A probabilistic reasoning model that infers the most likely faults in the
+source code.
+
+Next, we explain how to log program executions and perform fault localization
+using the "tcas" test suite under folder "SIR". Localizing faults in other
+tests can be done in a similar fashion.
+
+1. Build LLVM.
+
+Under the top-level folder, run "./configure" and "make" to build LLVM. We have
+tested on Ubuntu 16.04 and MacOS 10.14.3.
+
+2. Setting up the environment.
+
+Under this directory, run `source env.sh`
+Under SIR/ , run `source env.sh`
+
+3. For each benchmark under "SIR", use the following scripts to generate traces
+(we use tcas as an example):
+
+cd SIR/tcas/scripts/
+./runalltest.sh
+
+You can also generates traces from one particular test (say 1) by
+
+cd SIR/tcas/scripts/
+./test.sh 1
+
+4. Analyze the generated traces
+
+Step three generates the following folders/files for fault localization:
+t_all:  
+  X.tr: (traces of nodes; a leading 1 means fail; a leading 0 means fass), 
+  X.nd: (node id; (line start, line end); (column start, column end); scope; inlinedat)
+n_all: 
+  same as t_all/X.nd
+errorInfo (ground truth):
+  X: (faults) (computed as the diff of correct and incorrect files)
+
+Note: the analysis script currently requires Python 2 and gnuplot
+
+./AnalyzeAllTraces.sh SIR/tcas
+
+Analysis results are stored under "SIR/tcas/result_log"
+
+
+
+
+
+
+******* Notes on useful scripts 
+
+# bash files
+
+env.sh  -- set up the virtual environment for the project. 
+	`source env.sh`
+
+run.sh  
+
+AnalyzeAllTraces.sh 
+        -- Automated script to analyze all traces in one benchmark
+	`./AnalyzeAllTraces.sh <dir> [<base> <method>]`
+	-- default will test all (base, method) combinations so far
+
+
+# python scripts
+
+tr_simplify.py
+	-- reformat the traces into a more compact form
+	`python tr_simplify.py <traces>`
+	> generates <traces>.s and <traces>.p, 
+		where former is for single-node analysis and
+		  the latter is for paired-node analysis
+
+skeleton.py
+	-- Analyze the compact traces and give rank to nodes
+	`python skeleton.py [-h] [-d] -b {node,edge} -m {const,freq,loc}
+                   <nodes> <traces> <error> <version>`
+	> the results(log) will be generated in /tmp
+
+
+gnuplot.scripts/makegraph.py
+	-- reformat the logs(results) of the analysis to input of gnuplot
+	`python makegraph.py <logfile>`
+	> generates <logfile>.plot
+
+# GNUPLOT scripts
+
+gnuplot.scripts/plot.gnu
+	-- generates graph, should be at the directory of .plot files
+	`gnuplot ../../gnuplot.scripts/plot.gnu`
+	> generates performance.eps
+
+

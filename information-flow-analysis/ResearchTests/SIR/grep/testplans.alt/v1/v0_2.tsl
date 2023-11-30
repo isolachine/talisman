@@ -1,0 +1,125 @@
+#               grep_2.3 (excluded Regular expression)      
+
+# Usage: target [OPTION]... PATTERN [FILE]...               
+# Search for pattern in each FILE or standard input.
+# note: 
+#     1) use SingleQuoted, DoubleQuoted, NotQuoted to decrease the number of test cases.
+#     2) didn't use single file, multiple file to decrease the number of test cases.
+#     3) didn't decrease multiple control to decrease test cases.
+#***************************************************************************************  
+
+#Function unit 2: test  pattern, output options, file, etc. 
+                
+  
+Parameter-pattern:
+
+	Pattern size:
+		empty.					[property Empty]                         
+		single character(no metacharacter).    	[property NonEmpty] [single]
+		many characters(no metacharacters).	[property NonEmpty] 
+		longer than any line in the file.       [single]
+		newline.                                [error] 
+		
+	Quoting:
+		pattern is double quoted.	[property Quoted, DoubleQuoted]
+		pattern is single quoted.       [property Quoted, SingleQuoted]
+		pattern is not quoted.		[property NotQuoted]
+		#pattern is improperly quoted.		[error] 
+	
+	Embedded blanks:
+		no embedded blank.                 	[if NonEmpty]
+		one embedded blank.			[if NonEmpty && Quoted] [single]
+		several embedded blanks.		[if NonEmpty && Quoted] [single]
+	
+	Embedded quotes:                          	
+		no enbedded quotes.			[if NonEmpty]
+		enbedded pairs of double quotes.	[if NonEmpty && SingleQuoted] [single]
+		enbedded pairs of single quotes.	[if NonEmpty && DoubleQuoted] [single]
+		one embedded single quote.            	[if NonEmpty && DoubleQuoted] [single]
+		one embedded double quote.            	[if NonEmpty && SingleQuoted] [single]
+		#one single and one double embedded quotes. [error]		
+		
+		
+		
+Parameter-option:
+		
+	Pattern selection:
+		#useful to protect patterns beginning with a '-'
+		#PATTERN is quoted
+		-e PATTERN.  				[if Empty && NotQuoted] 
+		
+		#obtain patterns from FILE, one per line
+		-f FILE.        			[if Empty && NotQuoted] [single]
+		-w.      				[if NonEmpty] [single]
+		-x. 					[if NonEmpty] [single]
+		no Pattern selection.			[if NonEmpty]
+		
+	Reverse control:
+		with -v.                		[if NonEmpty][property Reverse]
+		without -v.				[property NonReverse]
+
+	Miscellaneous:
+		-i, -y.					[if NonEmpty || (Empty && NotQuoted)] 
+		-V.           				[if Empty && NotQuoted] [single]
+	 	no miscellaneous option.		[if NonEmpty]
+	 	
+	Context control:
+	 	-B NUM.  				[if NonEmpty] [single]
+  		-A NUM.  				[if NonEmpty] [single]
+  		-B NUM && -A NUM.           		[if NonEmpty] [single]
+ 		-C.  					[if NonEmpty] [single]
+ 		-NUM. 					[if NonEmpty] [single]
+ 		no context control.    			[if NonEmpty]
+		
+	Output control (a) (note - use SingleQuoted, DoubleQuoted, NotQuoted to decrease test cases):
+		-L.					[if DoubleQuoted] [property Control, Text]
+		-l.  					[if NotQuoted] [property Control, Text]
+	 	      
+		-n.       				[if SingleQuoted] [property Text]
+		        
+		-q.   					[if NonEmpty] [single]
+		-c.                  			[if DoubleQuoted] [property Control, Text]
+		no output control(a).			[if NonEmpty && NotQuoted] [property Text, Binary]
+	
+	Output control (b):	
+		-b.            				[if !Control]
+		no output control(b).			[if NonEmpty] 
+		
+	Output control (c):
+		-h. 					[if !Control] 
+		no output control(c).			[if NonEmpty] 
+	
+		
+#Didnostics:
+#		exit status:
+#		match, exit status 1.			[if Reverse] [single]
+#		no match, exit status 1.		[if Reverse] [single]
+#		match, exit status 0.			[property NonReverse] [single]
+#		no match, exit status 1.		[property NonReverse] [single]
+#		system error, exit status 2.		[property NonReverse] [single]
+
+Parameter-File or dir name (include an error item):
+		omitted.                      	 	[if NonEmpty] [single]
+		- (same as omitted).			[if NonEmpty] [single]
+		non-exits name.                		[if Empty && Quoted] [property Error] 
+		binary file name.              		[if Binary] 
+		one valid text file name (assume -h).	[if Text] [property Ok]
+		several valid text file names.		[if Text] [property Ok]
+		#directory name.				[if Directory] 
+		
+Parameter-option:
+	Suppress error messages:			
+		-s.     				[if NonEmpty && Error] [single] 
+		without -s.				[if NonEmpty]
+		
+Environments:
+	Number of occurrence of pattern in file or dir: 
+		none.					[if Ok && NonEmpty] [single]
+		exactly one.				[if NonEmpty && Ok] [single]
+		more than one.				[if NonEmpty && Ok] [property MultiMatch]
+	
+	Pattern occurrence on target line:
+	# assumes line contains the pattern
+		one.             		 	 [if MultiMatch && Ok] 
+		more than one.				 [if MultiMatch && Ok] [single]	
+			     

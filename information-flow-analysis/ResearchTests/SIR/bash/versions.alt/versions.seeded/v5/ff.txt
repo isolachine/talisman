@@ -1,0 +1,10 @@
+assign_in_env--./variables.c	FAULTY_F_KP_1
+find_completion_word--./lib/readline/complete.c	FAULTY_F_KP_3
+hostnames_matching--./bashline.c	FAULTY_F_KP_4
+ignore_globbed_names--./pathexp.c	FAULTY_F_KP_2
+pos_params--./subst.c	FAULTY_F_KP_9
+redirection_error--./redir.c	FAULTY_F_KP_6
+rl_yank_nth_arg_internal--./lib/readline/kill.c	FAULTY_F_KP_7
+_run_trap_internal--./trap.c	FAULTY_F_KP_8
+show_shell_version--./version.c	FAULTY_F_KP_5
+yy_stream_get--./y.tab.c	FAULTY_F_KP_10

@@ -1,0 +1,9 @@
+Contents of mts/bin:
+
+mts.jar - Java archive containing the MakeTestScript class files.
+
+/bsh - Wrapper scripts to emulate the versions of 'mts' and 'javamts'
+    that produce Bourne shell scripts.
+
+/csh - Wrapper scripts to emulate the versions of 'mts' and 'javamts'
+    that produce C/TC shell scripts. 

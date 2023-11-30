@@ -1,0 +1,49 @@
+; ModuleID = '<stdin>'
+target datalayout = "e-m:o-i64:64-f80:128-n8:16:32:64-S128"
+target triple = "x86_64-apple-macosx10.14.0"
+
+@.str = private unnamed_addr constant [2 x i8] c" \00", align 1
+
+; Function Attrs: nounwind ssp uwtable
+define i32 @function(i32 %key, i32 %key2) #0 {
+entry:
+  %call = call i64 @time(i64* null)
+  %conv = trunc i64 %call to i32
+  call void @srand(i32 %conv)
+  %call1 = call i32 @rand()
+  %add = add nsw i32 %key2, %call1
+  br label %for.cond
+
+for.cond:                                         ; preds = %for.inc, %entry
+  %u.0 = phi i32 [ 1, %entry ], [ %inc, %for.inc ]
+  %cmp = icmp slt i32 %u.0, %add
+  br i1 %cmp, label %for.body, label %for.end
+
+for.body:                                         ; preds = %for.cond
+  %call3 = call i32 (i8*, ...) @printf(i8* getelementptr inbounds ([2 x i8], [2 x i8]* @.str, i32 0, i32 0))
+  br label %for.inc
+
+for.inc:                                          ; preds = %for.body
+  %inc = add nsw i32 %u.0, 1
+  br label %for.cond
+
+for.end:                                          ; preds = %for.cond
+  ret i32 %u.0
+}
+
+declare void @srand(i32) #1
+
+declare i64 @time(i64*) #1
+
+declare i32 @rand() #1
+
+declare i32 @printf(i8*, ...) #1
+
+attributes #0 = { nounwind ssp uwtable "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="core2" "unsafe-fp-math"="false" "use-soft-float"="false" }
+attributes #1 = { "less-precise-fpmad"="false" "no-frame-pointer-elim"="true" "no-frame-pointer-elim-non-leaf" "no-infs-fp-math"="false" "no-nans-fp-math"="false" "stack-protector-buffer-size"="8" "target-cpu"="core2" "unsafe-fp-math"="false" "use-soft-float"="false" }
+
+!llvm.module.flags = !{!0}
+!llvm.ident = !{!1}
+
+!0 = !{i32 1, !"PIC Level", i32 2}
+!1 = !{!"clang version 3.7.0 (trunk) (git@git.psu.edu:dbz5017/LLVM-Deps.git dfce73fe0831457cbc5c1a8f7788dfcbd809ad99)"}

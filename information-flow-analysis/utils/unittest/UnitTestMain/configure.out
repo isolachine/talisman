@@ -1,0 +1,222 @@
+running CONFIG_SHELL=/bin/bash /bin/bash ./configure   --no-create --no-recursion
+checking for clang... clang
+checking for C compiler default output file name... a.out
+checking whether the C compiler works... yes
+checking whether we are cross compiling... no
+checking for suffix of executables... 
+checking for suffix of object files... o
+checking whether we are using the GNU C compiler... yes
+checking whether clang accepts -g... yes
+checking for clang option to accept ISO C89... none needed
+checking for clang++... clang++
+checking whether we are using the GNU C++ compiler... yes
+checking whether clang++ accepts -g... yes
+checking how to run the C preprocessor... clang -E
+checking whether clang works... yes
+checking whether GCC or Clang is our host compiler... clang
+configure: WARNING: Unknown project (llvm-deps) won't be configured automatically
+checking build system type... x86_64-unknown-linux-gnu
+checking host system type... x86_64-unknown-linux-gnu
+checking target system type... x86_64-unknown-linux-gnu
+checking type of operating system we're going to host on... Linux
+checking type of operating system we're going to target... Linux
+checking target architecture... x86_64
+checking whether Clang is new enough... yes
+checking whether Clang will select a modern C++ standard library... yes
+checking optimization flags... -O3
+checking for GNU make... make
+checking whether ln -s works... yes
+checking for nm... /usr/bin/nm
+checking for cmp... /usr/bin/cmp
+checking for cp... /usr/bin/cp
+checking for date... /usr/bin/date
+checking for find... /usr/bin/find
+checking for grep... /usr/bin/grep
+checking for mkdir... /usr/bin/mkdir
+checking for mv... /usr/bin/mv
+checking for ranlib... ranlib
+checking for ar... ar
+checking for rm... /usr/bin/rm
+checking for sed... /usr/bin/sed
+checking for tar... /usr/bin/tar
+checking for pwd... /usr/bin/pwd
+checking for dot... /usr/bin/dot
+checking for a BSD-compatible install... /usr/bin/install -c
+checking for bzip2... /usr/bin/bzip2
+checking for cat... /usr/bin/cat
+checking for doxygen... no
+checking for groff... /usr/bin/groff
+checking for gzip... /usr/bin/gzip
+checking for pdfroff... no
+checking for zip... /usr/bin/zip
+checking for go... no
+checking for ocamlfind... no
+checking for gas... no
+checking for as... /usr/bin/as
+checking for linker version... 2.38
+checking for compiler -Wl,-R<path> option... yes
+checking for compiler -rdynamic option... yes
+checking for compiler -Wl,--version-script option... yes
+checking for grep that handles long lines and -e... (cached) /usr/bin/grep
+checking for egrep... /usr/bin/grep -E
+checking for ANSI C header files... yes
+checking for sys/types.h... yes
+checking for sys/stat.h... yes
+checking for stdlib.h... yes
+checking for string.h... yes
+checking for memory.h... yes
+checking for strings.h... yes
+checking for inttypes.h... yes
+checking for stdint.h... yes
+checking for unistd.h... yes
+checking errno.h usability... yes
+checking errno.h presence... yes
+checking for errno.h... yes
+checking tool compatibility... ok
+checking optional compiler flags... -Wno-variadic-macros -Wno-missing-field-initializers -Wcovered-switch-default -Wno-uninitialized  -Wno-comment
+checking for python... /usr/bin/python
+checking for python >= 2.7... /usr/bin/python (2.7.18)
+checking for sin in -lm... yes
+checking for library containing dlopen... none required
+checking for library containing clock_gettime... none required
+checking for library containing setupterm... -ltinfo
+checking for library containing el_init... no
+checking for library containing mallinfo... none required
+checking for pthread_mutex_init in -lpthread... yes
+checking for library containing pthread_mutex_lock... none required
+checking for library containing pthread_rwlock_init... none required
+checking for library containing pthread_getspecific... none required
+checking for compress2 in -lz... yes
+checking for xml2-config... xml2-config
+checking for libxml2 includes... -I/usr/include/libxml2
+checking for xmlReadFile in -lxml2... yes
+checking for dirent.h that defines DIR... yes
+checking for library containing opendir... none required
+checking for MAP_ANONYMOUS vs. MAP_ANON... yes
+checking whether stat file-mode macros are broken... no
+checking for sys/wait.h that is POSIX.1 compatible... yes
+checking whether time.h and sys/time.h may both be included... yes
+checking for cxxabi.h... yes
+checking dlfcn.h usability... yes
+checking dlfcn.h presence... yes
+checking for dlfcn.h... yes
+checking execinfo.h usability... yes
+checking execinfo.h presence... yes
+checking for execinfo.h... yes
+checking fcntl.h usability... yes
+checking fcntl.h presence... yes
+checking for fcntl.h... yes
+checking for inttypes.h... (cached) yes
+checking link.h usability... yes
+checking link.h presence... yes
+checking for link.h... yes
+checking malloc.h usability... yes
+checking malloc.h presence... yes
+checking for malloc.h... yes
+checking setjmp.h usability... yes
+checking setjmp.h presence... yes
+checking for setjmp.h... yes
+checking signal.h usability... yes
+checking signal.h presence... yes
+checking for signal.h... yes
+checking for stdint.h... (cached) yes
+checking termios.h usability... yes
+checking termios.h presence... yes
+checking for termios.h... yes
+checking for unistd.h... (cached) yes
+checking utime.h usability... yes
+checking utime.h presence... yes
+checking for utime.h... yes
+checking sys/mman.h usability... yes
+checking sys/mman.h presence... yes
+checking for sys/mman.h... yes
+checking sys/param.h usability... yes
+checking sys/param.h presence... yes
+checking for sys/param.h... yes
+checking sys/resource.h usability... yes
+checking sys/resource.h presence... yes
+checking for sys/resource.h... yes
+checking sys/time.h usability... yes
+checking sys/time.h presence... yes
+checking for sys/time.h... yes
+checking sys/uio.h usability... yes
+checking sys/uio.h presence... yes
+checking for sys/uio.h... yes
+checking sys/ioctl.h usability... yes
+checking sys/ioctl.h presence... yes
+checking for sys/ioctl.h... yes
+checking malloc/malloc.h usability... no
+checking malloc/malloc.h presence... no
+checking for malloc/malloc.h... no
+checking mach/mach.h usability... no
+checking mach/mach.h presence... no
+checking for mach/mach.h... no
+checking valgrind/valgrind.h usability... yes
+checking valgrind/valgrind.h presence... yes
+checking for valgrind/valgrind.h... yes
+checking fenv.h usability... yes
+checking fenv.h presence... yes
+checking for fenv.h... yes
+checking whether FE_ALL_EXCEPT is declared... yes
+checking whether FE_INEXACT is declared... yes
+checking pthread.h usability... yes
+checking pthread.h presence... yes
+checking for pthread.h... yes
+checking zlib.h usability... yes
+checking zlib.h presence... yes
+checking for zlib.h... yes
+checking CrashReporterClient.h usability... no
+checking CrashReporterClient.h presence... no
+checking for CrashReporterClient.h... no
+checking __crashreporter_info__... no
+checking for HUGE_VAL sanity... yes
+checking for pid_t... yes
+checking for size_t... yes
+checking whether struct tm is in sys/time.h or time.h... time.h
+checking for int64_t... yes
+checking for uint64_t... yes
+checking for backtrace... yes
+checking for getcwd... yes
+checking for getpagesize... yes
+checking for getrusage... yes
+checking for getrlimit... yes
+checking for setrlimit... yes
+checking for gettimeofday... yes
+checking for isatty... yes
+checking for mkdtemp... yes
+checking for mkstemp... yes
+checking for mktemp... yes
+checking for posix_spawn... yes
+checking for pread... yes
+checking for realpath... yes
+checking for sbrk... yes
+checking for setrlimit... (cached) yes
+checking for strerror... yes
+checking for strerror_r... yes
+checking for setenv... yes
+checking for strtoll... yes
+checking for strtoq... yes
+checking for sysconf... yes
+checking for malloc_zone_statistics... no
+checking for setjmp... yes
+checking for longjmp... yes
+checking for sigsetjmp... no
+checking for siglongjmp... yes
+checking for writev... yes
+checking for futimes... yes
+checking for futimens... yes
+checking if printf has the %a format character... yes
+checking for srand48/lrand48/drand48 in <stdlib.h>... yes
+checking whether arc4random is declared... no
+checking whether strerror_s is declared... no
+checking for stdlib.h... (cached) yes
+checking for unistd.h... (cached) yes
+checking for getpagesize... (cached) yes
+checking for working mmap... yes
+checking for mmap of files... yes
+checking if /dev/zero is needed for mmap... no
+checking for GCC atomic builtins... yes
+checking for 32-bit userspace on 64-bit system... no
+checking for __dso_handle... yes
+checking for compiler -fvisibility-inlines-hidden option... yes
+configure: creating ./config.status

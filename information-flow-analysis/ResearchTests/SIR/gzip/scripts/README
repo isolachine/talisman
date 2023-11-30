@@ -1,0 +1,19 @@
+Before you start an experiment, you should be done the following steps: 
+
+1. Install mts
+   Please download from subject page. 
+
+2. Set environment variable experiment_root to point to the parent directory of
+   the subject directory by typing "setenv experiment_root <path>"
+   For example, assume you have a subject directory "gzip" and you locate
+   it under /cs_machine/exp_group/experiments, then you would give the command:
+
+        setenv experiment_root /cs_machine/exp_group/experiments
+
+3. After installation of target version, create script using mts and
+   run that script.
+
+   Example:
+        mts .. ../source/allfile ../testplans.alt/v0/v0.tsl.universe R scriptR0 
+	NULL NULL 
+

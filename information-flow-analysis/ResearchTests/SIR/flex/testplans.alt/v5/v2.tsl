@@ -1,0 +1,108 @@
+# Test Specification for flex command
+#flex-2.5.1
+
+
+Parameters:
+	
+	Input file name:
+		good file name.			
+
+	Backing up:			# -b
+		Backup_off.		[property NoBackUp]
+		
+	Help:				# -h
+		Help_off.
+
+	Case-insensitive:		# -i
+		CaseInsen_off.
+
+	Default rule:			# -s
+		DefaultRule_off.
+
+	Standard output:		# -t
+		Stdout_off.
+
+	Statistics:			# -v
+		Statistics_off.
+
+	Warning message:		# -w
+		Warn_off.
+
+	Batch scanner:			# -B
+		Batch_off.
+
+	No #line directives:		# -L
+		No#line_off.
+
+	Trace mode:			# -T
+		Trace_off.
+
+	Print version number:		# -V
+		Version_off.
+	
+	7-bit scanner:			# -7
+		7bit_off.
+
+	Prefix:				# -Pprefix 
+		Prefix_off.
+
+	Debug mode:			# -d
+		Debug_on.	
+		Debug_off.
+
+
+	Bypass use:			# -Cr
+		Bypass_on.			[property Bypass]
+		Bypass_off.
+
+	Fast scanner:			# -f, -Cf
+		FastScan.		[property FastScan]
+		FullScan.		[if !Bypass][property FullScan]
+		off.			[property f&Cfoff]
+
+	Fast scanner with table:	# -F, -CF
+		FastScanTable.		[if f&Cfoff][property FastScanTable]
+		Alternate fast.		[if f&Cfoff && !Bypass][property AltFast]
+		off.			[property F&CFoff]
+
+	Align:				# -Ca, -Cfa, -CFa
+		Align.			[if !FullScan && !AltFast][property Align]
+		off.
+
+	Equivalence classes:		# -Ce, -Cfe, -CFe
+		EquiClass.		[if !FullScan && !AltFast][property EquiClass]
+		off.
+	
+	Meta-equivalence classes:	# -Cm
+		on.		[if f&Cfoff && F&CFoff][property MetaEq]
+		off.
+
+	8-bit scanner:			# -8
+		off.
+
+	Compatibility with AT&T lex:	# -l !F&CFoff && 
+		on.			[if (F&CFoff && f&Cfoff)] 
+		off.			
+
+	Output file:			# -ooutput 
+		on.
+
+	Performance report:		# -p
+		off.				
+
+Environments:
+
+	Format of input file:
+		General.
+
+	Definitions:
+		Match.
+		Options.		[single]
+
+	Rules:
+		Match.
+
+	Patterns:
+		All.
+		POSIX Character.		[single]
+		StartConditionScope.		[single]

@@ -1,0 +1,121 @@
+#==============================================================================#
+# This file specifies intentionally untracked files that git should ignore.
+# See: http://www.kernel.org/pub/software/scm/git/docs/gitignore.html
+#
+# This file is intentionally different from the output of `git svn show-ignore`,
+# as most of those are useless.
+#==============================================================================#
+
+#==============================================================================#
+# File extensions to be ignored anywhere in the tree.
+#==============================================================================#
+# Temp files created by most text editors.
+*~
+# Merge files created by git.
+*.orig
+!*.orig/
+# Byte compiled python modules.
+*.pyc
+# vim swap files
+.*.sw?
+.sw?
+#OS X specific files.
+.DS_store
+# Plotting data, and result logs
+*/result_log/*.plot
+*/result_log/*.log
+*/result_log/*.eps
+
+#==============================================================================#
+# Explicit files to ignore (only matches one).
+#==============================================================================#
+# Various tag programs
+/tags
+/TAGS
+/GPATH
+/GRTAGS
+/GSYMS
+/GTAGS
+.gitusers
+autom4te.cache
+cscope.files
+cscope.out
+autoconf/aclocal.m4
+autoconf/autom4te.cache
+/compile_commands.json
+
+
+#==============================================================================#
+# Directories to ignore (do not add trailing '/'s, they skip symlinks).
+#==============================================================================#
+# External projects that are tracked independently.
+!projects/CMakeLists.txt
+!projects/Makefile
+# Clang, which is tracked independently.
+# tools/clang
+# LLDB, which is tracked independently.
+tools/lldb
+# lld, which is tracked independently.
+tools/lld
+# llgo, which is tracked independently.
+tools/llgo
+# Polly, which is tracked independently.
+tools/polly
+# Sphinx build tree, if building in-source dir.
+docs/_build
+
+#==============================================================================#
+# Files created in tree by the Go bindings.
+#==============================================================================#
+bindings/go/llvm/llvm_config.go
+bindings/go/llvm/workdir
+
+
+#==============================================================================#
+# Ignore so that you can actually read the git status
+#==============================================================================#
+# unittests
+# tools
+libs
+# test
+# utils
+*.ll
+*.bc
+Target
+Debug+Asserts
+*.cmake
+*.common
+*.def
+*.config
+Config
+IR
+Support
+*.log
+*.status
+*.cfg
+*.spec
+ocaml
+*.llvmbuild
+*.con
+*.dat
+*.svg
+
+.vscode/
+.idea/
+*.dot
+
+!/projects/llvm-deps/linux_security_tests/tomoyo/*.bc
+!/projects/llvm-deps/linux_security_tests/selinux/*.bc
+!/projects/llvm-deps/linux_security_tests/apparmor/*.bc
+
+projects/llvm-deps/**/**/configs.bak
+projects/llvm-deps/**/**/results
+projects/llvm-deps/**/**/old_version/
+projects/llvm-deps/processing_tools/*.pdf
+projects/llvm-deps/processing_tools/*.svg
+projects/llvm-deps/processing_tools/data/
+projects/llvm-deps/processing_tools/add_constant.py
+projects/llvm-deps/linux_security_tests/constant.sh
+projects/llvm-deps/linux_security_tests/imp_wl.py
+projects/llvm-deps/linux_security_tests/test.py
+projects/llvm-deps/linux_security_tests/test.txt

@@ -1,0 +1,28 @@
+// $ANTLR 2.7.6 (2005-12-22): STImpL.g -> STImpLParserTokenTypes.txt$
+STImpLParser    // output token vocab name
+ASSIGN_VAR=4
+NEWLINE=5
+SET_CLASSPATH=6
+"-P"=7
+BEGIN=8
+END=9
+"-I"=10
+"-O"=11
+"-F"=12
+BAR=13
+"-S"=14
+"-s"=15
+EQ=16
+"-X"=17
+"-x"=18
+"-C"=19
+"-D"=20
+"-B"=21
+"-A"=22
+DATA=23
+WS=24
+FLAG=25
+DATA_ESC=26
+DATA_NO_ESC=27
+ESC=28
+SUBST=29

@@ -1,0 +1,9 @@
+initialize_subshell--./execute_cmd.c	FAULTY_F_KP_1	0
+ansicstr--./stringlib.c	FAULTY_F_SK_1	1
+wait_for_single_pid--./jobs.c	FAULTY_F_KP_2	2
+parameter_brace_expand_length--./subst.c	FAULTY_F_SK_10	0
+dispose_command--./dispose_cmd.c	FAULTY_F_SPK_2	3
+assign_array_var_from_string--./variables.c	FAULTY_F_KP_3	4
+arithcomp--./test.c	FAULTY_F_SK_2	5
+last_pid--./jobs.c	FAULTY_F_KP_4	6
+match_pattern_char--./subst.c	FAULTY_F_SK_4	7

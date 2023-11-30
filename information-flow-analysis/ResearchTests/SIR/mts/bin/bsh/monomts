@@ -1,0 +1,186 @@
+#!/bin/bash
+#
+# A wrapper script to emulate the interface and functionality of the
+# old javamts tool, mapping it to the interface of the new MakeTestScript
+# program.
+#
+# This script is intended to be a facade to provide backward compatibility
+# for existing scripts expecting the old javamts tool interface. Error handling
+# is not comprehensive and may not be robust to abnormal inputs. Where
+# possible, scripts should be updated to use the new MakeTestScript tool
+# interface directly. This script is intended in part to serve as an example
+# of how to update such existing scripts. For this reason, more verbose
+# parameters are used in some cases to make this script more pedagogically
+# useful.
+#
+# Do not use this script to invoke MakeTestScript from an interactive shell;
+# learn the new interface.
+#
+# Alex Kinneer
+# University of Nebraska - Lincoln
+# Feb. 8, 2006
+# 
+# modified by
+# Wayne Motycka
+# University of Nebraska - Lincoln
+# August 18, 2010
+
+# SET THIS VARIABLE to the path where you put MakeTestScript on your system
+#MTS_PATH="/home/wmotycka/mts"
+# This was hard coded, the next script tries to find the MTS_PATH from the
+# path of the command ($0) this only works if the command is exec'd from
+# the location it is delivered by SIR but it was better than hard coding -wdm
+
+MTS_PATH=${0%/*}
+if [ ! -f ${MTS_PATH}/MakeTestScript.jpx ]
+then
+    # go hunting for the mts base directory
+    while ! [ -f ${MTS_PATH}/MakeTestScript.jpx ]
+    do
+       MTS_PATH=`echo ${MTS_PATH%/*}`
+       if [ $MTS_PATH == "/" ]
+       then
+           echo "exhausted search for mts root dir, can't find dir where mts is"
+           echo "installed on your system.  Try using the full path to the mts script"
+           exit 1
+       fi
+    done
+fi
+
+# SET THIS VARIABLE to the appropriate value depending on whether you are
+# using Galileo or Sofya for trace collection (if you don't understand this,
+# you can safely ignore this variable)
+DB_DIR=".galileodb"
+
+# Set this variable if you want to override the location of antlr
+ANTLR_PATH="${MTS_PATH}/lib/antlr-2.7.6.jar"
+
+
+# Do not change the script beyond this point unless you really know what you
+# are doing
+
+CLASSPATH=${CLASSPATH}:${MTS_PATH}/bin/mts.jar:${ANTLR_PATH}
+export CLASSPATH
+
+# Usage message copied verbatim
+printUsage() {
+echo ''
+echo 'USAGE: javamts <subject-dir> <subject-exe> <universe-file> R|D|d|T <script-name> <program-suffix> <compare-dir> <instrument-option>'
+echo '  <subject-dir>      : name of test database dir'
+echo '  <subject-exe>      : name of exe'
+echo '                     : or galileo.inst.Filter for script type T.'
+echo '  <universe-file>    : universe file name with path'
+echo '   R|D|d|T           : script type = R: Runall,'
+echo '                                     D: Runall-Diff using cmp,'
+echo '                                     d: Runall-Diff using diff,'
+echo '                                     T: Runall-Trace'
+echo '  <script-name>      : name of output script'
+echo '  <program-suffix>   : suffix of program name(will append '.c.tr'),'
+echo '                       or NULL (case insensitive) -- only for script type T.'
+echo '  <compare-dir>          : name of directory containing outputs to compare'
+echo '                       test outputs to, or NULL (case insensitive)'
+echo '                       --only for script type D'
+echo ''
+echo ''
+echo '  <instrument-option>: -B|E|X|C -- only for script type T.'
+echo '                       NULL for other script types.'
+exit 1
+}
+
+if [ $# -lt 5 ]; then
+  printUsage
+fi
+
+# Turn off all shell tokenizing of variables, so we can reliably pass certain
+# parameters verbatim to MakeTestScript.
+IFS=""
+
+STIMPLE_FILE="${3}"
+SCRIPT_NAME="${5}"
+EXP_DIR="${1}"
+SUBJECT_EXE="${2}"
+
+# Construct the arguments to create 'diff'-scripts. Because variable tokenizing
+# is disabled, we use arrays to pair parameter data with the appropriate
+# MakeTestScript parameter flags, otherwise it would all be passed as one giant
+# parameter to MakeTestScript. If the array is unset, it will be expand to
+# nothing, so it is safe for the non 'diff'-type scripts.
+setDiffArgs() {
+  DIFF_ARGS[0]="--compare-outputs"
+  if [ "${1}" != "" ] && [ `echo ${1} | tr A-Z a-z` != "null" ]; then
+    DIFF_ARGS[1]="${1}"
+    DIFF_ARGS[2]="${2}"
+  else
+    echo 'Argument 7 (dir_old) must be present and not null'
+    exit 1
+  fi
+}
+
+# Construct the arguments to create trace scripts. The same considerations
+# apply here as for the setDiffArgs() function.
+setTraceArgs() {
+  TRACE_ARGS[0]="--trace"
+  TRACE_ARGS[1]="--trace-source-dir"
+  TRACE_ARGS[2]='${HOME}/'"${DB_DIR}"
+  #TRACE_ARGS[2]='$HOME/.galileodb' # Exact diff compatibility with old javamts
+  if [ "${1}" != "" ] && [ `echo ${1} | tr A-Z a-z` != "null" ]; then
+    TRACE_ARGS[3]="--trace-name"
+    TRACE_ARGS[4]="${1}"
+  else
+    echo 'Argument 6 (program_suffix) must be present and not null'
+    exit 1
+  fi
+  
+  if [ "${2}" != "" ] && [ `echo ${2} | tr A-Z a-z` != "null" ]; then
+    TRACE_ARGS[5]="--exe-suffix"
+    TRACE_ARGS[6]=" ${2}"
+    TRACE_ARGS[7]="D"
+  fi
+}
+
+# Convert the old 'script-type' parameter to the appropriate parameters
+# to MakeTestScript
+case "${4}" in
+  R)
+    ;;
+  D)
+    setDiffArgs "${7}" "cmp -s"
+    ;;
+  d)
+    setDiffArgs "${7}" "diff -r"
+    ;;
+  T)
+    setTraceArgs "${6}" "${8}"
+    ;;
+  D_T)
+    setDiffArgs "${7}" "cmp -s"
+    setTraceArgs "${6}" "${8}"
+    ;;
+  d_T)
+    setDiffArgs "${7}" "diff -r"
+    setTraceArgs "${6}" "${8}"
+    ;;
+  *)
+    printUsage
+    ;;
+esac
+
+JVM="mono"
+
+if [ "${9}" != "" ]; then
+  if [ "${9}" = "-trInc" ]; then
+    TRINC="--legacy-macros"
+  else
+    JVM="${9}"
+  fi
+fi
+
+if [ "${10}" = "-trInc" ]; then
+  TRINC="--legacy-macros"
+fi
+
+# Invoke MakeTestScript. As noted previously, the DIFF_ARGS and TRACE_ARGS
+# array expansions disappear if the arrays are unset. All other parameters
+# (and input data used in DIFF_ARGS and TRACE_ARGS where appropriate) are
+# passed verbatim, including spaces and any other special characters.
+java sir.mts.MakeTestScript --no-escapes ${TRINC} --stimple-file ${STIMPLE_FILE} --script-name ${SCRIPT_NAME} --experiment-dir ${EXP_DIR} --invoke-prefix ${JVM} --exe-name ${SUBJECT_EXE} ${DIFF_ARGS[@]} ${TRACE_ARGS[@]} --target bsh --print-config

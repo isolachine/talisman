@@ -1,0 +1,391 @@
+{
+  "signature_mode": {
+    "direction": 1,
+    "pointer": 0,
+    "custom": []
+  },
+  "lattice": {
+    "levels": [
+      {
+        "name": "source",
+        "level": ["mediator", "input", "external"]
+      },
+      {
+        "name": "value",
+        "level": ["static", "k-static", "dynamic"]
+      }
+    ],
+    "compartments": [
+      {
+        "name": "purpose",
+        "set": ["subject", "object", "operation", "policy"]
+      }
+    ]
+  },
+  "source": [
+    {
+      "type": "constant",
+      "name": "BITS_PER_LONG",
+      "file": "include/asm-generic/getorder.h",
+      "line": 19,
+      "value": 64,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "GFP_DMA",
+      "file": "include/linux/slab.h",
+      "line": 418,
+      "value": 1,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "KMALLOC_MAX_CACHE_SIZE",
+      "file": "include/linux/slab.h",
+      "line": 415,
+      "value": 8192,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "KMALLOC_MIN_SIZE",
+      "file": "include/linux/slab.h",
+      "line": 252,
+      "value": 8,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "KMALLOC_MIN_SIZE",
+      "file": "include/linux/slab.h",
+      "line": 255,
+      "value": 64,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "KMALLOC_MIN_SIZE",
+      "file": "include/linux/slab.h",
+      "line": 257,
+      "value": 192,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "KMALLOC_SHIFT_LOW",
+      "file": "include/linux/slab.h",
+      "line": 253,
+      "value": 3,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "PAGE_SHIFT",
+      "file": "include/asm-generic/getorder.h",
+      "line": 18,
+      "value": 12,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "PAGE_SIZE",
+      "file": "security/tomoyo/common.h",
+      "line": 1306,
+      "value": 4096,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IALLUGO",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 241,
+      "value": 4095,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IFBLK",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 247,
+      "value": 24576,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IFCHR",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 244,
+      "value": 8192,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IFIFO",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 256,
+      "value": 4096,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IFMT",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 243,
+      "value": 61440,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IFMT",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 255,
+      "value": 61440,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "S_IFSOCK",
+      "file": "security/tomoyo/tomoyo.c",
+      "line": 259,
+      "value": 49152,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "ZERO_SIZE_PTR",
+      "file": "include/linux/slab.h",
+      "line": 422,
+      "value": 16,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "__GFP_ZERO",
+      "file": "include/linux/slab.h",
+      "line": 578,
+      "value": 32768,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "type": "constant",
+      "name": "page_to_pfn",
+      "file": "include/linux/mm.h",
+      "line": 951,
+      "value": 0,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "function": "tomoyo_path_number_perm",
+      "type": "variable",
+      "name": "path",
+      "index": -1,
+      "l": {
+        "source": "input",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "tomoyo_path_number_perm",
+      "type": "variable",
+      "name": "type",
+      "index": -1,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "function": "tomoyo_path_number_perm",
+      "type": "variable",
+      "name": "number",
+      "index": -1,
+      "l": {
+        "source": "external",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "function": "tomoyo_path_number_perm",
+      "type": "variable",
+      "name": "buf",
+      "index": -1,
+      "l": {
+        "source": "input",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "type": "variable",
+      "name": "current_task",
+      "index": -1,
+      "l": {
+        "source": "external",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["subject"] }
+    }
+  ],
+  "sink": [
+    {
+      "function": "tomoyo_check_acl",
+      "type": "argument",
+      "number": 0,
+      "index": 2,
+      "l": {
+        "source": "mediator",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["subject"] }
+    },
+    {
+      "function": "tomoyo_check_acl",
+      "type": "argument",
+      "number": 0,
+      "index": 3,
+      "l": {
+        "source": "mediator",
+        "value": "dynamic"
+      },
+      "c": { "purpose": ["object"] }
+    },
+    {
+      "function": "tomoyo_check_acl",
+      "type": "argument",
+      "number": 0,
+      "index": 4,
+      "l": {
+        "source": "mediator",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    },
+    {
+      "function": "tomoyo_check_acl",
+      "type": "argument",
+      "number": 0,
+      "index": 5,
+      "l": {
+        "source": "mediator",
+        "value": "static"
+      },
+      "c": { "purpose": ["operation"] }
+    }
+  ],
+  "using_constant": true,
+  "using_whitelist": true,
+  "whitelist": [],
+  "implicit_whitelist": [
+    { "file": "security/tomoyo/file.c", "line": 565 },
+    { "file": "security/tomoyo/file.c", "line": 701 },
+    { "file": "security/tomoyo/file.c", "line": 702 },
+    { "file": "security/tomoyo/file.c", "line": 750 },
+    { "file": "security/tomoyo/file.c", "line": 758 },
+    { "file": "security/tomoyo/file.c", "line": 761 },
+    { "file": "security/tomoyo/file.c", "line": 797 },
+    { "file": "security/tomoyo/file.c", "line": 798 },
+    { "file": "security/tomoyo/file.c", "line": 814 },
+    { "file": "security/tomoyo/file.c", "line": 852 },
+    { "file": "security/tomoyo/file.c", "line": 853 },
+    { "file": "security/tomoyo/file.c", "line": 898 },
+    { "file": "security/tomoyo/file.c", "line": 899 },
+    { "file": "security/tomoyo/mount.c", "line": 94 },
+    { "file": "security/tomoyo/mount.c", "line": 102 },
+    { "file": "security/tomoyo/mount.c", "line": 122 },
+    { "file": "security/tomoyo/mount.c", "line": 132 },
+    { "file": "security/tomoyo/mount.c", "line": 138 },
+    { "file": "security/tomoyo/mount.c", "line": 147 },
+    { "file": "security/tomoyo/network.c", "line": 473 },
+    { "file": "security/tomoyo/network.c", "line": 474 },
+    { "file": "security/tomoyo/network.c", "line": 509 },
+    { "file": "security/tomoyo/network.c", "line": 517 },
+    { "file": "security/tomoyo/network.c", "line": 548 },
+    { "file": "security/tomoyo/network.c", "line": 549 },
+    { "file": "security/tomoyo/network.c", "line": 560 },
+    { "file": "security/tomoyo/network.c", "line": 596 },
+    { "file": "security/tomoyo/tomoyo.c", "line": 126 },
+    { "file": "security/tomoyo/tomoyo.c", "line": 315 },
+    { "file": "security/tomoyo/tomoyo.c", "line": 382 }
+  ],
+  "entry": ["tomoyo_path_number_perm"]
+}

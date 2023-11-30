@@ -1,0 +1,10 @@
+initialize_shell_variables--./variables.c	FAULTY_F_KP_8	1
+do_redirection_internal--./execute_cmd.c	FAULTY_F_KP_9	2
+brace_gobbler--./braces.c	FAULTY_F_SK_1	3
+make_command_string_internal--./print_cmd.c	FAULTY_F_SK_2	4
+attempt_shell_completion--./bashline.c	FAULTY_F_SK_4	0
+execute_command_internal--./execute_cmd.c	FAULTY_F_SK_5	5
+change_signal--./trap.c	FAULTY_F_SK_7	6
+_rl_get_screen_size--./lib/readline/terminal.c	FAULTY_F_SPK_1	7
+insert_match--./lib/readline/complete.c	FAULTY_F_SPK_10	8
+tilde_expand--./lib/readline/tilde.c	FAULTY_F_SPK_7	9

@@ -1,0 +1,34 @@
+{
+  "signature_mode": {
+    "direction": 1,
+    "pointer": 0,
+    "custom": []
+  },
+  "lattice": {
+    "levels": [
+      {
+        "name": "secret",
+        "level": ["public", "private"]
+      }
+    ],
+    "compartments": []
+  },
+  "source": [
+    {
+      "type": "constant",
+      "name": "CONSTANT_100",
+      "file": "main.c",
+      "line": 6,
+      "value": 100,
+      "l": {
+        "secret": "private"
+      },
+      "c": {}
+    }
+  ],
+  "sink": [],
+  "using_whitelist": true,
+  "using_constant": true,
+  "whitelist": [],
+  "entry": ["main"]
+}

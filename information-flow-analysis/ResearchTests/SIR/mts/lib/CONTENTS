@@ -1,0 +1,4 @@
+Contents of mts/lib:
+
+antlr-2.7.6.jar - ANTLR archive required by the MakeTestScript lexer
+    and parser.

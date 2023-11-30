@@ -1,0 +1,12 @@
+These directories contain the test oracles for each version with the faults
+inserted.  Within each directory there is two versions of the fault-matrix
+files, essentially a new and original version.  The new versions were created
+by executing the make-fault-matrix-with-names command (see SIR c-tools) on
+the most recent (v1.4) version of the universe file.  The original versions
+were the fault matrices delivered with the original artifact that was received
+by the SIR.  These two differ in that the original artifact versions only
+show a subset of the faults listed in the FaultSeeds.h files.  Since it is
+nearly impossible to determine which faults were activated in the original
+fault matrices the latest versions have all faults activated individually.
+
+

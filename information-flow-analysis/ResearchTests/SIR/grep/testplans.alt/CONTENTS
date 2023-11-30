@@ -1,0 +1,9 @@
+
+The version directories for this subject contain an additional file named
+"v0.cov.universe.esc". This file contains the same test cases as the
+file "v0.cov.universe.esc", except that the file has been converted to the
+STImpL file format using escape sequences. You must use the new release
+of the MakeTestScript tool on these files. This ensures that correct scripts
+will be generated for both the C and Bourne shells. Other universe
+files are only guaranteed to correctly generate C shell scripts.
+

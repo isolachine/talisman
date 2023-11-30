@@ -1,0 +1,133 @@
+Using MakeTestScript
+--------------------
+
+The command to invoke MakeTestScript is as follows:
+
+java sir.mts.MakeTestScript --stimple-file|-sf <file> --script-name|-sn <name>
+    --exe-name|-en <name> [--experiment-dir|-ed <path>
+    [--compare-outputs|-c <comp_dir> [comp_cmd>]] [--compare-type|-ct D|d]
+    [--trace|-t] [--trace-source-dir|-ts <path>] [--trace-name|-tn <name>]
+    [--invoke-prefix|-ip <prefix>] [--invoke-suffix|-is <suffix>]
+    [--exe-prefix|-ep <prefix>] [--exe-suffix|-es <suffix> [D]] [--java|-j]
+    [--target|-tg <script_gen_class>] [--no-escapes|-nesc] [--legacy-macros|-lm]
+    [--print-config|-pc] [--version]
+
+Parameters in square brackets ('[', ']') are optional. Items in angle brackets
+('<', '>') are required data for associated parameters. A bar ('|') indicates
+a choice among options. The function of each parameter is described below.
+
+    --stimple-file | -sf <file> :
+        Specifies the STImpL (universe) <file> from which to generate a test
+        script. This parameter must be provided.
+
+    --script-name | -sn <name> :
+        Specifies the <name> of the test script file to be generated. This
+        parameter must be provided.
+
+    --exe-name | -en <name> :
+        Specifies the <name> of the executable program under test in the
+        generated script. This parameter must be provided.
+
+    --experiment-dir | --ed <path> :
+        Specifies the <path> to the directory containing the subject
+        infrastructure for the program under test. If absent, defaults to "..",
+        which enables scripts to execute correctly if run from the
+        "scripts" directory of an SIR subject.
+
+    --compare-outputs | -c <comp_dir> [comp_cmd] :
+        Specifies that the generated script will be an output comparing script.
+        Such a script will compare the output files recorded from stdout and
+        stderr during program execution against the same output files from
+        a previous run at a specified location. Files that are moved using
+        STImpL '-F' commands are also compared.
+            <comp_dir> is required and specifies the path to the directory
+                containing the old files against which current test case
+                outputs should be compared by the script.
+            [comp_cmd] is an optional parameter specifying the command to be
+                used for file comparison. Options to the command can be
+                provided; parameters will be consumed from the command line
+                until another valid MakeTestScript parameter is encountered
+                or the end of the parameter list is reached. Alternately,
+                it can be provided as a single quoted parameter.
+
+    --trace | -t :
+        Specifies that the generated script will collect traces.
+
+    --trace-source-dir | -ts <path> :
+        Specifies the <path> to the directory from which the generated script
+        will attempt to copy trace files. Ignored if the script is not to be a
+        trace collecting script. If "--trace | -t" is specified but this
+        parameter is absent, MakeTestScript will attempt to guess an appropriate
+        trace source directory based on other parameters and historical
+        assumptions from 'mts' and 'javamts'.
+
+    --trace-name | -tn <name> :
+        Specifies the <name> of the trace file that will be copied from the
+        trace source directory if this script is a trace collecting script,
+        ignored otherwise.
+
+    --invoke-prefix | -ip <prefix> :
+        Specifies a <prefix> to be inserted at the front of test case
+        invocations in the generated script. This is the preferred way of
+        specifying the virtual machine to be used for Java subjects, by
+        specifying a prefix such as "java" or "jikes". It may also be used in
+        conjunction with "--invoke-suffix | -is" to achieve other effects.
+        For example, in many shells, specifying an invoke prefix of "(" and
+        invoke suffix of ")" will cause the test case to be run in a subshell.
+
+    --invoke-suffix | -is <suffix> :
+        Specifies a <suffix> to be appended at the end of test case
+        invocations in the generated script.
+
+    --exe-prefix | -ep <prefix> :
+        Specifies a <prefix> to be concatenated to the start of the
+        executable program name. The prefix will be directly concatenated
+        without whitespace.
+
+    --exe-suffix | -es <suffix> [D] :
+        Specifies a <suffix> to be concatenated to the end of the executable
+        program name. The suffix will directly concatenated without whitespace.
+            [D] An optional parameter that instructs MakeTestScript to only
+                append the suffix to the executable name for test cases that
+                specify a test driver (the '-D' STImpL command). This is
+                provided primarily to achieve backward compatibility with the
+                implementation of the <inst_option> parameter to the old
+                'javamts' tool.
+
+    --java | -j :
+        Indicates to MakeTestScript that the subject program under test is
+        a Java subject. MakeTestScript will set defaults for a number of
+        parameters to emulate the old 'javamts' tool. Using this parameter
+        is a shorthand for the specifying the following to MakeTestScript:
+            --invoke-prefix "java"
+            --trace-source-dir '${SOFYA_DB_DIR}'
+            --trace-name "instout.tr"
+
+    --target | -tg <bsh|csh|<script_gen_class>> :
+        Specifies the target language of the script to be generated.
+            "bsh" instructs MakeTestScript to generate a Bourne shell script.
+            "csh" instructs MakeTestScript to generate a C shell script.
+            <script_gen_class> instructs MakeTestScript to attempt to load the
+                specified class as a plugin and use it to generate the output
+                script. The specified class must implement the
+                'sir.mts.TestScriptGenerator' interface, and provide a public
+                constructor that accepts a single argument of type
+                'sir.mts.Configuration'.
+
+    --no-escapes | -nesc :
+        Disables the recognition of backslash character escapes by the
+        MakeTestScript lexer. This is intended only to provide backward
+        compatibility with existing universe files, when necessary.
+
+    --legacy-macros | -lm :
+        Enables recognition of a legacy substitution macro '%n%' that was used
+        to insert the current test case number at the given location. Handling
+        of this substitution is deferred to the script generator. Very few
+        should require use of this parameter.
+
+    --print-config | -pc :
+        Causes MakeTestScript to print the configuration after all parameters
+        have been parsed and before beginning processing of the STImpL file.
+
+    --version :
+        Displays the MakeTestScript version number.

@@ -1,0 +1,134 @@
+Java MakeTestScript:
+A replacement Java implementation of the make-test-script (mts/javamts)
+programs.
+
+This is a component of the Subject Infrastructure Repository (SIR).
+May 04, 2006
+
+For information about using the MakeTestScript program and associated items,
+please refer to the 'MANUAL' file in the 'doc' directory. This document outlines
+the features and contents of this distribution package. There are three sections
+to this document: CONTENTS, NEW FEATURES, and ACKNOWLEDGEMENTS.
+
+
+CONTENTS OF THIS PACKAGE
+------------------------
+
+build.xml - Ant build script for MakeTestScript.
+
+MakeTestScript.jpx, MakeTestScript.jpx.local - JBuilder project files
+    for MakeTestScript
+
+/src - Java source code for the MakeTestScript program.
+
+/bin - Compiled, executable MakeTestScript program, and wrapper scripts
+    to emulate the old 'mts' and 'javamts' programs. Please consult the user
+    documentation for details on how to properly use the wrapper scripts.
+
+/doc - Documentation for the MakeTestScript program.
+
+/lib - Libraries used by the MakeTestScript program.
+
+/validation - Scripts and validation reports demonstrating backward
+    compatibility with the old 'mts' and 'javamts' tools.
+
+
+NEW FEATURES
+------------------------
+
+Parsing - The MakeTestScript implementation is built on an ANTLR (ANother Tool
+for Language Recognition) lexer and grammar specification. Precise locations
+of errors are now reported when a malformed STImpL (universe) file is supplied
+to MakeTestScript, which should aid in debugging.
+
+Output script languages - Generation of C shell and Bourne shell scripts is now
+supported as a runtime parameter; it is no longer necessary to compile distinct
+versions of the tool. It is also easy to develop extensions to generate scripts
+in other languages.
+
+Escape characters - It is now possible to escape characters that normally have
+special meaning in certain contexts in STImpL files. As a consequence, truly
+arbitrary data can be inserted in most data sections of STImpL commands
+(between the '[' and ']'). This feature can be turned off to enable backward
+compatibility with old universe files.
+
+Substitution macros - Special macro tokens are now supported to enable the lexer
+to automatically substitute dynamic data at certain locations in the output.
+One macro is currently supported, "\{TEST}", which will substitute the
+current test number at the given location in the output. This mechanism can be
+easily extended to support other substitutions as desired.
+
+File output comparison - The command to compare file outputs can now be
+specified as a command line parameter. File comparison options are no longer
+restricted only to 'diff' and 'cmp', and parameters can be provided to the
+tool used for file comparison.
+
+Trace and compare scripts - It is now actually possible to generate scripts
+that collect traces and compare outputs, as documented.
+
+Startup and finishing scripts - It is now actually possible to use both external
+script invocations and inlined scripts on the same test case, as documented.
+It is now possible to 'pass' parameters to inlined scripts.
+
+New STImpL commands - The '-D' command can be used to specify that a test
+driver be used to execute a test case. The '-B' command can be used to request
+that a test case be run as a background job.
+
+New invocation flexibility - Various command line parameters enable very
+flexible customizations of the invocation commands for test cases. Executable
+names can be modified with prefixes and suffixes, and prefixes and suffixes
+can be attached to the entire command.
+
+No arbitrary limits - The number of output files that can be moved is no longer
+limited to three. Any number of startup and finishing scripts can be called or
+inlined, and any number of output files can be moved.
+
+Trace collection flexibility - The invocation prefix, executable prefix, and
+test driver ('-D') command provide extremely flexible support for any type of
+trace collection from test cases run on instrumented programs. Options are
+provided to specify the trace file name, and the location where trace files
+will be found.
+
+
+ACKNOWLEDGEMENTS
+------------------------
+
+We would like to acknowledge Terence Parr and the University of San Francisco
+for the creation of ANTLR, and its release free of licensing or copyright
+restrictions.
+
+
+CHANGE HISTORY
+------------------------
+
+1.1
+  - Fixed problem with improper shell quoting of parameters under certain
+    circumstances when generating Bourne shell scripts. Requires a minor
+    modification to affected STImpL files to use a new escape macro.
+  - Integrated XMLGenerator class to generate XML encodings of STImpL
+    specifications, contributed by Ben Liblit, University of Wisconsin.
+  - Added '--version' parameter to display MakeTestScript version.
+
+1.2
+  - Fixed problem with hard coded path in mts and javamts shell scripts.
+    Scripts will now try to learn where the mts package in installed
+    by path inspection of the called shell command (mts/javamts).  As
+    long as the user executes the command from these directories (by adding
+    the mts/bin/[bc]sh directory to their path) the script can find the
+    MakeTestScript.jpx and mts.jar files.
+
+1.3 (Aug 19, 2010)
+- Fixed a problem in BourneShellScriptGenerator.java (orig lines 306-328)
+  in the endTest() function when generating -D output comparison code
+  it was generating csh syntax instead of bash syntax as intended.  Thanks
+  to Zhao Lei at Wuhan University for finding this bug.
+
+1.4 (June 30, 2012)
+- Modified the mts_old.c source to create the mts-mono.c source which
+  will interpret STIMPL Universe files and create test scripts compatible
+  with the 'mono' C# interpreter/compiler usage syntax.  Little testing
+  has been performed on this tool (given the minimal number of C# objects)
+  so use it and report any usage problems back to galileo@cse.unl.edu .
+  The compiled version of this (mts-mono) was built on a SuSE 10.1 system
+  so it is recommended that you rebuild it (gcc -o mts-mono mts-mono.c)
+  on your target Linux/Unix system due to share library dependencies.
