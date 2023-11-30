@@ -74,11 +74,11 @@ bindings/go/llvm/workdir
 #==============================================================================#
 # Ignore so that you can actually read the git status
 #==============================================================================#
-# unittests
-# tools
+unittests
+tools
 libs
-# test
-# utils
+test
+utils
 *.ll
 *.bc
 Target
