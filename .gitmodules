@@ -1,0 +1,3 @@
+[submodule "endorsement"]
+	path = endorsement
+	url = https://github.com/mitthu/lsm-trusty-kernel
